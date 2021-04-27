@@ -13,5 +13,5 @@ jobs:
       - uses: helaili/jekyll-action@v2
         with:
           token: ${{ secrets.GH_TOKEN }}
-          jekyll_build_options: -V
+          jekyll_build_options: '-V --destination build'
           target_branch: 'gh-pages'
