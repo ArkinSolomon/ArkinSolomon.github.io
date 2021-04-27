@@ -14,3 +14,4 @@ jobs:
         with:
           token: ${{ secrets.GH_TOKEN }}
           jekyll_build_options: -V
+          target_branch: 'gh-pages'
