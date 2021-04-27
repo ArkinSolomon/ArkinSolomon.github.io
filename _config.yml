@@ -10,7 +10,7 @@ plugins:
   - jekyll-seo-tag
 destination: '_site'
 include:
- - _pages
+  - _pages
 exclude:
   - .sass-cache/
   - .jekyll-cache/
@@ -22,5 +22,8 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+
+sass:
+  style: compressed
 
 theme: jekyll-theme-cayman
