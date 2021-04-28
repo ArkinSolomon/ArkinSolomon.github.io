@@ -10,10 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Install Node.js
-        run: sudo apt-get install nodejs
       - uses: helaili/jekyll-action@v2
         with:
           token: ${{ secrets.GH_TOKEN }}
           jekyll_build_options: '-V'
+          pre_build_commands: sudo apt-get install nodejs
           target_branch: 'gh-pages'
