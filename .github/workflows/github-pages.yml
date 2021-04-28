@@ -12,6 +12,8 @@ jobs:
       - uses: actions/checkout@v2
       - name: Setup Node.js environment
         uses: actions/setup-node@v2.1.5
+      - name: Check Node.js installation
+        run: node --version
       - name: Install ExecJs
         run: sudo gem install execjs
       - uses: helaili/jekyll-action@v2
