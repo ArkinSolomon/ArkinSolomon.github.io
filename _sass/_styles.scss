@@ -1,6 +1,6 @@
 $white: #ffffff;
 $black: #000000;
-$footer-text-color: #9c9c9c;
+$light-gray: #9c9c9c;
 
 @mixin centerer {
   position: absolute;
@@ -19,20 +19,54 @@ html, body {
   margin: 0;
 }
 
-footer {
-    margin-top: 5px;
-    position: relative;
-    hr {
+header {
+  z-index: 1000;
+  background-color: $white;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 100%;
+  position: fixed;
+  border-bottom: 1px solid $light-gray;
+  a {
+    text-decoration: none;
+    color: $black;
+    &:hover {
+      text-decoration: underline;
+      color: $black;
+    }
+  }
+  .cell {
+    margin-left: 15px;
+    margin-right: 15px;
+    .links-container {
+      height: 100%;
       width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      a {
+        margin-left: 5px;
+        padding-left: 3px;
+        padding-right: 3px;
+        &:hover {
+          color: $white;
+          background-color: $black;
+          text-decoration: none;
+          border-radius: 3px;
+        }
+      }
     }
-    p {
-      margin-top: 15px;
-    }
+  }
 }
 
 footer {
-  height: 50px;
-  text-align: center;
+    margin-top: 5px;
+    position: relative;
+    height: 50px;
+    text-align: center;
+    hr {
+      width: 100%;
+    }
 }
 
 main {
@@ -40,9 +74,9 @@ main {
 }
 
 #footer-text {
-  color: $footer-text-color;
+  color: $light-gray;
   a {
-    color: $footer-text-color;
+    color: $light-gray;
     text-decoration: underline;
   }
 }
@@ -56,11 +90,21 @@ main {
   background-color: $black;
   color: $white;
   height: 75vh;
-  h1 {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  #center-wrapper {
+    width: 100%;
+    h1 {
+      font-size: 45pt;
+    }
+    h5 {
+      margin-top: 5px;
+    }
   }
 }
 
