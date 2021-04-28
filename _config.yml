@@ -2,7 +2,7 @@ title: Arkin Solomon
 email: arkinsolomon@gmail.com
 description: ""
 baseurl: ""
-url: "arkinsolomon.github.io"
+url: "https://arkinsolomon.github.io"
 plugins:
   - jekyll-seo-tag
   - jekyll-minifier
@@ -21,7 +21,9 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
-
+jekyll-minifier:
+  uglifier_args:
+    harmony: true
 theme: ''
 sass:
   style: compressed
