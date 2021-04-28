@@ -10,13 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2.1.5
       - uses: helaili/jekyll-action@v2
         with:
           token: ${{ secrets.GH_TOKEN }}
           jekyll_build_options: '-V'
           target_branch: 'gh-pages'
-      - name: Run a multi-line script
-        run: |
-          npm install -g minify-all-js
-          minify-all-js .
