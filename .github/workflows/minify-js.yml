@@ -1,9 +1,8 @@
-
-name: minify-js
+name: Minify JavaScript files
 on:
   push:
     branches: [ gh_pages ]
-  workflow_dispatch:
+    
 jobs:
   minify-js:
     runs-on: ubuntu-latest
