@@ -1,3 +1,50 @@
-h1 {
-  color: blue;
+$footer-text-color: #9c9c9c;
+
+@mixin centerer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+footer {
+    margin-top: 20px;
+    position: relative;
+    hr {
+      width: 100%;
+    }
+}
+
+footer, .push {
+  height: 50px;
+}
+
+main {
+  min-height: 100%;
+  margin-bottom: -50px;
+}
+
+#footer-text {
+  color: $footer-text-color;
+  a {
+    color: $footer-text-color;
+    text-decoration: underline;
+  }
+}
+
+#main-wrapper {
+  width: 100%;
+}
+
+#home-title {
+  height: 50%;
+}
+
+.center {
+  @include centerer;
 }
