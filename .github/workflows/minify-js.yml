@@ -1,0 +1,17 @@
+
+name: minify-js
+on:
+  push:
+    branches: [ gh_pages ]
+  workflow_dispatch:
+jobs:
+  minify-js:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2.1.5
+      
+      - name: Run a multi-line script
+        run: |
+          npm install -g minify-all-js
+          minify-all-js .
