@@ -1,0 +1,106 @@
+---
+title: Pascal's triangle
+permalink: /pascals-triangle
+---
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pascal's Triangle</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+
+        //First line
+        var lineZero = {
+          line: [1]
+        };
+
+        //Second line
+        var lineOne = {
+          line: [1, 1],
+          prevLine: lineZero
+        };
+
+        //All the lines of the triangle
+        var lines = [lineZero, lineOne];
+
+        //Each line is stored with an array and a reference to the previous line
+        class Line {
+          constructor(prevLine){
+              this.prevLine = prevLine;
+              this.i = lines.length;
+              var prevNumber = 0;
+              var currNumber = 0;
+              this.line = [];
+              for (let i = 0; i <= prevLine.line.length; ++i){
+                currNumber = (typeof prevLine.line[i] !== 'undefined') ? prevLine.line[i] : 0;
+                prevNumber = (i !== 0) ? prevLine.line[i - 1] : 0;
+                console.log(prevNumber);
+                this.line.push(currNumber + prevNumber);
+              }
+          }
+        }
+
+        function addLine(){
+          var newLine = new Line(lines[lines.length - 1]);
+          lines.push(newLine);
+          $('#wrapper2').html($('#wrapper2').html() + `<p class="line" id="line-${newLine.i}">${lines[newLine.i].line.join(' ')}</p>`);
+          var elem = $(`#line-${newLine.i}`);
+        }
+
+        window.addEventListener('scroll', () => {
+          const {
+              scrollTop,
+              scrollHeight,
+              clientHeight
+          } = document.documentElement;
+          if (scrollTop + clientHeight >= scrollHeight - 36){
+            addLine();
+          }
+        }, { passive: true });
+
+        //Initialize to page height
+        var h = $('#wrapper').outerHeight();
+        while (h < document.documentElement.clientHeight){
+          addLine();
+          h = $('#wrapper').outerHeight();
+        }
+      });
+    </script>
+    <style>
+
+      p {
+        font-family: sans-serif;
+        font-size: 15px;
+      }
+
+      #wrapper {
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      #wrapper2 {
+        margin: 1rem -2rem;
+        padding: 2rem 2rem;
+        display: table;
+      }
+
+      .line{
+        max-width: 100%;
+        margin: 0 auto;
+        white-space: nowrap;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="wrapper2">
+        <p class="line">1</p>
+        <p class="line">1 1</p>
+      </div>
+    </div>
+  </body>
+</html>
