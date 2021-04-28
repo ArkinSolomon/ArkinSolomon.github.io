@@ -23,6 +23,7 @@ exclude:
   - vendor/gems/
   - vendor/ruby/
 
+theme: ''
 sass:
   style: compressed
 

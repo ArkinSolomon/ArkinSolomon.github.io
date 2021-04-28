@@ -2,11 +2,8 @@
 <html lang="en" dir="ltr">
   {% include head.html %}
   <body>
-    <div id="main-wrapper">
-      <main>
-        {{ content }}
-      </main>
-      {% include footer.html %}
-    </div>
+    {% include header.html %}
+    {{ content }}
+    {% include footer.html %}
   </body>
 </html>
