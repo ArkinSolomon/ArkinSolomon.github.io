@@ -1,7 +1,7 @@
 name: Minify JavaScript files
 on:
   push:
-    branches: [ gh_pages ]
+    branches: [ gh-pages ]
     
 jobs:
   minify-js:
