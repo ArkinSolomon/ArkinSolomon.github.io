@@ -5,3 +5,14 @@ permalink: /projects
 main-title: Projects
 subtitle: Check out my finished and ongoing projects.
 ---
+<div class="grid-x">
+  {% for project in site.data.projects | sort:"name" %}
+    {% assign link = project.link %}
+    {% assign name = project.name %}
+    {% assign imgpath = project.image-path %}
+    {% assign shortdesc = project.short-desc %}
+    <div class="cell small-12 medium-4 large-4">
+      {% include project-card.html %}
+    </div>
+  {% endfor %}
+</div>

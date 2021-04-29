@@ -2,6 +2,10 @@
 layout: main
 ---
 {% assign project = site.data.projects | where:"id", page.id | first %}
+{% assign force-width = "100%" %}
+{% if page.force-width %}
+  {% assign force-width = page.force-width %}
+{% endif %}
 <div id="main-wrapper">
   <main>
     <div id="project-title">
@@ -9,7 +13,7 @@ layout: main
       <h6>{{ project.short-desc }}</h6>
     </div>
     <hr>
-    <img class="project-image" src="{{ project.image-path }}" alt="{{ project.name }}">
+    <img style="width: {{ force-width }} !important;" class="project-image" src="{{ project.image-path }}" alt="{{ project.name }}">
     <div id="project-content">
       {{ content }}
     </div>
