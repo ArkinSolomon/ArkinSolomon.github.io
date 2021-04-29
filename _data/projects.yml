@@ -5,7 +5,6 @@
   short-desc: An infinitely scrolling Pascal's Triangle
   featured: true
   tags:
-    - Random
     - HTML
     - JavaScript
 - name: SpanishDict Client
@@ -15,6 +14,5 @@
   short-desc: A SpanishDict web-scraper
   featured: true
   tags:
-    - Random
     - NPM
     - JavaScript
