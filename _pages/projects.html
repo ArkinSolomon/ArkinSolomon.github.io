@@ -5,14 +5,41 @@ permalink: /projects
 main-title: Projects
 subtitle: Check out my finished and ongoing projects.
 ---
+<div id="projects-header">
+  <h2 class="text-center">Projects</h2>
+  <div id="tag-filter-container" class="text-center">
+    {% assign tags = site.data.projects[0].tags %}
+    {% for project in site.data.projects %}
+      {% for checktag in project.tags %}
+        {% if tags contains checktag %}
+          {% continue %}
+        {% endif %}
+        {% assign tags = tags | push: checktag %}
+      {% endfor %}
+    {% endfor %}
+    {% for tag in tags %}
+      {% include filter-button.html %}
+    {% endfor %}
+  </div>
+</div>
 <div class="grid-x">
-  {% for project in site.data.projects | sort:"name" %}
+  {% assign sorted = site.data.projects | sort:"name" %}
+  {% for project in sorted %}
     {% assign link = project.link %}
     {% assign name = project.name %}
     {% assign imgpath = project.image-path %}
     {% assign shortdesc = project.short-desc %}
-    <div class="cell small-12 medium-4 large-4">
+    {% assign project-id = project.id %}
+    {% assign tags = "[" %}
+    {% for tag in project.tags %}
+      {% assign tags = tags | append:"'" | append:tag | append:"'," %}
+    {% endfor %}
+    {% assign tags = tags | append:"]" %}
+    <div class="cell small-12 medium-4 large-4 project-card-cell" data-project-id="{{ project-id }}" data-tags="{{ tags }}">
       {% include project-card.html %}
     </div>
   {% endfor %}
 </div>
+<script src="/assets/js/project/tag.js" charset="utf-8"></script>
+<script src="/assets/js/project/projectCard.js" charset="utf-8"></script>
+<script src="/assets/js/project/projectFilter.js" charset="utf-8"></script>

@@ -4,9 +4,17 @@
   link: /projects/pascals-triangle
   short-desc: An infinitely scrolling Pascal's Triangle
   featured: true
+  tags:
+    - Random
+    - HTML
+    - JavaScript
 - name: SpanishDict Client
   id: spanish-dict-client
   image-path: /images/projects/generic/npm-logo.png
   link: /projects/spanish-dict-client
   short-desc: A SpanishDict web-scraper
   featured: true
+  tags:
+    - Random
+    - NPM
+    - JavaScript

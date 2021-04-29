@@ -3,9 +3,12 @@
   {% include head.html %}
   <body>
     {% include header.html %}
-    <div id="page-wrapper"> 
+    <div id="page-wrapper">
       {{ content }}
       {% include footer.html %}
     </div>
   </body>
+  <script type="text/javascript">
+    $(document).foundation();
+  </script>
 </html>

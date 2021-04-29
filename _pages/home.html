@@ -6,7 +6,7 @@ main-title: Hello, I'm Arkin Solomon
 subtitle: I'm 17 years old, and I love to code.
 ---
 <section class="home-section">
-  <h3>Projects</h3>
+  <h3>Featured Projects</h3>
   <div class="grid-x">
     {% for project in site.data.projects %}
       {% if project.featured %}
@@ -19,5 +19,8 @@ subtitle: I'm 17 years old, and I love to code.
         </div>
       {% endif %}
     {% endfor %}
+  </div>
+  <div class="rel all-button-wrapper">
+    <a class="all-button" href="/projects">All projects &gt;</a>
   </div>
 </section>
