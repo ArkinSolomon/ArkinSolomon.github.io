@@ -192,8 +192,21 @@ main {
   }
 }
 
-.all-button-wrapper {
+#about-title-wrapper {
+  padding-top: 20px;
+}
+
+#about-text {
+  color: $text-gray; 
+}
+
+#about-title {
+  @include manrope-font;
   margin-top: 20px;
+}
+
+.all-button-wrapper {
+  margin-top: 30px;
 }
 
 .all-button {
@@ -203,7 +216,7 @@ main {
   border-radius: 15px;
   border: 1px solid black;
   text-align: center;
-  width: $card-button-width;
+  width: 18%;
   @include black-hover-anchor;
   @include center-horiz;
 }
@@ -273,10 +286,6 @@ main {
    border: rgba(0,0,0,0);
    background: rgba(0,0,0,0);
  }
-}
-
-.align-center {
-  text-align: center;
 }
 
 .center {
