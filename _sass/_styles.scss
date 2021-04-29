@@ -1,6 +1,16 @@
+@charset 'UTF-8';
+
 $white: #ffffff;
 $black: #000000;
 $light-gray: #9c9c9c;
+$dark-gray: #505050;
+$text-gray: #474747;
+$content-wrapper-width: 60%;
+$hover-transition-time: .3s;
+
+@mixin manrope-font {
+  font-family: 'Manrope', sans-serif;
+}
 
 @mixin centerer {
   position: absolute;
@@ -14,12 +24,24 @@ $light-gray: #9c9c9c;
   margin: 0 auto;
 }
 
+@mixin black-hover-anchor {
+  text-decoration: none;
+  color: $black;
+  transition: $hover-transition-time;
+  &:hover {
+    color: $white;
+    background-color: $black;
+    text-decoration: none;
+  }
+}
+
 html, body {
   height: 100%;
   margin: 0;
 }
 
 header {
+  @include manrope-font;
   z-index: 1000;
   background-color: $white;
   padding-top: 5px;
@@ -28,10 +50,11 @@ header {
   position: fixed;
   border-bottom: 1px solid $light-gray;
   a {
-    text-decoration: none;
+    text-decoration: underline solid $white;
     color: $black;
+    transition: text-decoration $hover-transition-time ease;
     &:hover {
-      text-decoration: underline;
+      text-decoration: underline solid $black;
       color: $black;
     }
   }
@@ -48,12 +71,8 @@ header {
         margin-left: 5px;
         padding-left: 3px;
         padding-right: 3px;
-        &:hover {
-          color: $white;
-          background-color: $black;
-          text-decoration: none;
-          border-radius: 3px;
-        }
+        border-radius: 3px;
+        @include black-hover-anchor;
       }
     }
   }
@@ -65,7 +84,7 @@ footer {
     height: 50px;
     text-align: center;
     hr {
-      width: 60%;
+      width: $content-wrapper-width;
     }
 }
 
@@ -82,8 +101,8 @@ main {
 }
 
 #main-wrapper {
-  width: 60%;
-  @include center-horiz
+  width: $content-wrapper-width;
+  @include center-horiz;
 }
 
 #home-title {
@@ -99,15 +118,89 @@ main {
   #center-wrapper {
     width: 100%;
     h1 {
+      @include manrope-font;
       font-size: 45pt;
     }
     h5 {
+      @include manrope-font;
       margin-top: 5px;
     }
   }
 }
 
+#page-wrapper {
+  margin: 0;
+  padding: 0;
+  border-width: 0;
+}
+
+#header-padding {
+  height: 51px;
+}
+
+#project-title {
+  padding-top: 20px;
+  h2, h6 {
+    @include manrope-font;
+  }
+  h6 {
+    @include manrope-font;
+    color: $dark-gray;
+  }
+}
+
+#project-image {
+  @include center-horiz;
+}
+
+#project-content {
+  color: $text-gray;
+}
+
+.project-card {
+  border-radius: 5px;
+  border: 1px solid black;
+  padding: 0;
+  margin: 10px;
+  &> img, &> h5 {
+    @include manrope-font;
+    width: 100%;
+    display: block;
+  }
+  img {
+    margin: 0;
+    border-radius: 4px;
+    height: 175px;
+    object-fit: cover;
+  }
+  h5, &> p {
+    padding-left: 5px;
+  }
+  &> p {
+    color: $dark-gray;
+    font-size: 10pt;
+  }
+  &> .anchor-wrapper {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  a {
+    padding: 4px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 15px;
+    border: 1px solid black;
+    text-align: center;
+    width: 50%;
+    @include center-horiz;
+    @include black-hover-anchor;
+  }
+}
+
 .home-section {
+  h3 {
+    @include manrope-font;
+  }
   margin-top: 10px;
 }
 

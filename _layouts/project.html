@@ -1,0 +1,17 @@
+---
+layout: main
+---
+{% assign project = site.data.projects | where:"id", page.id | first %}
+<div id="main-wrapper">
+  <main>
+    <div id="project-title">
+      <h2>{{ page.title }}</h2>
+      <h6>{{ project.short-desc }}</h6>
+    </div>
+    <hr>
+    <img id="project-image" src="{{ project.image-path }}" alt="{{ project.name }}">
+    <div id="project-content">
+      {{ content }}
+    </div>
+  </main>
+</div>
