@@ -1,48 +1,18 @@
 ---
 layout: project
-title: Spanish-Dict Client
+title: SpanishDict Client
 permalink: /projects/spanish-dict-client
 id: spanish-dict-client
+force-width: 50%
 ---
-Pascal's Triangle was something that we all learned about in school, the coefficients of a binomial. Each coefficient is the sum of the two coefficients above it. It extends infinitely. So I figured, for something infinitely generated, why not make it infinitely scrollable.
+<div class="callout warning">
+  <h6>This project is against SpanishDict's terms of service and has been deprecated. Use the package or any code at your own risk.</h6>
+</div>
 
-Creating this wasn't incredibly difficult, I think it took me about a day to create, just for fun. The code itself is pretty simple as well. It's a linked list, with the line contents is created in the line class constructor, as seen here:
+Hola! Mi nombre es Arkin y no puedo hablar Español. Could you understand that? No? Neither can I! Good thing we have SpanishDict that comes to the rescue for all your Spanish translation needs. And no, I'm sponsored, SpanishDict is just what helped me get through Spanish class. When I used it, I was always surprised at how it could conjugate verbs into any tense, something that I really really struggled with. There came a point where I had to fill out a spreadsheet of conjugations, so naturally, I decided to make the whole process "easier" (I spent more time making this package than it would've taken me to do the assignment myself) by doing it automatically. After searching far and wide for a SpanishDict API, I couldn't find one, so I made one myself and published it on NPM.
 
-```js
-constructor(prevLine){
-    this.prevLine = prevLine;
-    this.i = lines.length;
-    var prevNumber = 0;
-    var currNumber = 0;
-    this.line = [];
-    for (let i = 0; i <= prevLine.line.length; ++i){
-      currNumber = (typeof prevLine.line[i] !== 'undefined') ? prevLine.line[i] : 0;
-      prevNumber = (i !== 0) ? prevLine.line[i - 1] : 0;
-      this.line.push(currNumber + prevNumber);
-    }
-}
-```
-<br>
-Here's the code to generate a new line whenever someone scrolls down. I'm 99% sure I found the scroll event listener off of StackOverflow, but it is pretty simple. All we're doing is getting the position of the top of the screen (basically how far it scrolled down), `scrollTop`, and adding it to the height of the client, `clientHeight`. If these variables are greater than about the end of the page, `scrollHeight`, then a new line is added.
+The package is extremely simple, at less than 150 lines of code in total. It's spread across two files, one handles conjugation, and one handles translation. Each file simply make a request to SpanishDict to get the appropriate page (either /conjugate or /translate), then using [Cheerio](https://www.npmjs.com/package/cheerio), it scrapes the site and returns the appropriate data.
 
-```js
-function addLine(){
-  var newLine = new Line(lines[lines.length - 1]);
-  lines.push(newLine);
-  $('#wrapper2').html($('#wrapper2').html() + `<p class="line" id="line-${newLine.i}">${lines[newLine.i].line.join(' ')}</p>`);
-  var elem = $(`#line-${newLine.i}`);
-}
+I was really proud of this project, even though it only has 367 downloads in total (as of 4/28/2021). I suppose the need for this package is very specific, there already exists better translation APIs, that I probably should have used. That was one of my biggest mistakes, it would've been so much easier just to use one of those. However, I did learn a lot from making this package, it taught me how to scrape the web through Node.js, something I still use (for personal/private projects). This was also around the time I was learning how to use promises (I'm not sure if this was my first project with promises) and I remember this helping me figure out a lot. As with any project, I learned from it, and it didn't even take me that long to make, so I would say that it was worth it.
 
-window.addEventListener('scroll', () => {
-  const {
-      scrollTop,
-      scrollHeight,
-      clientHeight
-  } = document.documentElement;
-  if (scrollTop + clientHeight >= scrollHeight - 36){
-    addLine();
-  }
-}, { passive: true });
-```
-<br>
-The full code for this project is on a Gist which you can view [here](https://gist.github.com/ArkinSolomon/e706638df4be5b04fbeb9719adb326ee). I have also uploaded a demo of the triangle which you can view [here](/demos/pascals-triangle).
+The project source code is available on GitHub [here](https://github.com/ArkinSolomon/spanish-dict-client). You can install the project through NPM [here](https://www.npmjs.com/package/spanish-dict-client) and try out the package for yourself (at your own risk).

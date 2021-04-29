@@ -8,17 +8,16 @@ subtitle: I'm 17 years old, and I love to code.
 <section class="home-section">
   <h3>Projects</h3>
   <div class="grid-x">
-    {% assign max = 3 %}
-    {% assign counter = 1 %}
-    {% for project in site.data.projects | sort:"name" %}
-      {% assign link = project.link %}
-      {% assign name = project.name %}
-      {% assign imgpath = project.image-path %}
-      {% assign shortdesc = project.short-desc %}
-      <div class="cell small-12 medium-4 large-4">
-        {% include project-card.html %}
-      </div>
-      {% assign counter = counter | plus: 1%}
+    {% for project in site.data.projects %}
+      {% if project.featured %}
+        {% assign link = project.link %}
+        {% assign name = project.name %}
+        {% assign imgpath = project.image-path %}
+        {% assign shortdesc = project.short-desc %}
+        <div class="cell small-12 medium-4 large-4">
+          {% include project-card.html %}
+        </div>
+      {% endif %}
     {% endfor %}
   </div>
 </section>

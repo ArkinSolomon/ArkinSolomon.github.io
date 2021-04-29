@@ -7,6 +7,8 @@ $dark-gray: #505050;
 $text-gray: #474747;
 $content-wrapper-width: 60%;
 $hover-transition-time: .3s;
+$card-button-width: 150px;
+$neg-card-button-width-over-2: -75px;
 
 @mixin manrope-font {
   font-family: 'Manrope', sans-serif;
@@ -148,11 +150,6 @@ main {
   }
 }
 
-.project-image {
-  @include center-horiz;
-  margin-bottom: 10px;
-}
-
 #project-content {
   h1, h2, h3, h4, h5, h6 {
     @include manrope-font;
@@ -161,21 +158,27 @@ main {
   color: $text-gray;
 }
 
+.project-image {
+  @include center-horiz;
+  margin-bottom: 10px;
+}
+
 .project-card {
   border-radius: 5px;
   border: 1px solid black;
   padding: 0;
   margin: 10px;
+  height: 95%;
   &> img, &> h5 {
     @include manrope-font;
     width: 100%;
     display: block;
   }
   img {
-    margin: 0;
+    padding: 8px;
     border-radius: 4px;
-    height: 175px;
-    object-fit: cover;
+    height: 200px;
+    object-fit: contain;
   }
   h5, &> p {
     padding-left: 5px;
@@ -195,7 +198,7 @@ main {
     border-radius: 15px;
     border: 1px solid black;
     text-align: center;
-    width: 50%;
+    width: $card-button-width;
     @include center-horiz;
     @include black-hover-anchor;
   }
@@ -211,15 +214,15 @@ main {
 .highlight {
   padding: 4px;
   border: 1px solid $light-gray;
-  border-radius: 3px;
+  border-radius: 5px;
   * {
    border: rgba(0,0,0,0);
    background: rgba(0,0,0,0);
  }
 }
 
-.center-horiz {
-  @include center-horiz;
+.align-center {
+  text-align: center;
 }
 
 .center {
