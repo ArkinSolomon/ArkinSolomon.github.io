@@ -149,11 +149,13 @@ main {
   }
 }
 
-#project-image {
+.project-image {
   @include center-horiz;
+  margin-bottom: 10px;
 }
 
 #project-content {
+  margin-top: 30px;
   color: $text-gray;
 }
 
@@ -202,6 +204,20 @@ main {
     @include manrope-font;
   }
   margin-top: 10px;
+}
+
+.highlight {
+  padding: 4px;
+  border: 1px solid $light-gray;
+  border-radius: 3px;
+  * {
+   border: rgba(0,0,0,0);
+   background: rgba(0,0,0,0);
+ }
+}
+
+.center-horiz {
+  @include center-horiz;
 }
 
 .center {
