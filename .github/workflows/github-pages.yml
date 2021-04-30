@@ -14,5 +14,5 @@ jobs:
         with:
           token: ${{ secrets.GH_TOKEN }}
           jekyll_build_options: '-V'
-          pre_build_commands: apk add --update nodejs npm
+          pre_build_commands: apk add --update nodejs npm python3; chmod +x liquidHighlight.py; ./liquidHighlight.py
           target_branch: 'gh-pages'
