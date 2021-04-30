@@ -11,10 +11,11 @@ files = list(Path(pagesPath).rglob('*.[mM][dD]'))#
 
 # Loop through all files
 for f in files:
-    file = open(f, 'w+')
+    file = open(f, 'r')
     text = file.read()
-    newText = re.sub(r'^```(\w+)?$', text, '{% highlight \1 linenos %}', flags=re.MULTILINE)
-    newText = re.sub(r'^```$', newText, '{% endhighlight %}', flags=re.MULTILINE)
-    file.seek(0)
-    file.write(newText)
+    file.close()
+    new_text = re.sub(r'^```(\w+)$', r'{% highlight \1 linenos %}', text, flags=re.MULTILINE)
+    new_text = re.sub(r'^```$', '{% endhighlight %}', new_text, flags=re.MULTILINE)
+    file = open(f, 'w')
+    file.write(new_text)
     file.close()

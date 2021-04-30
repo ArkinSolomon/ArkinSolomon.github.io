@@ -93,6 +93,13 @@ main {
   min-height: 100%;
 }
 
+code[class^="language-"] {
+  padding: 0;
+  .rouge-table {
+    margin-bottom: 0;
+  }
+}
+
 #footer-text {
   color: $light-gray;
   a {
@@ -197,7 +204,7 @@ main {
 }
 
 #about-text {
-  color: $text-gray; 
+  color: $text-gray;
 }
 
 #about-title {
@@ -279,7 +286,6 @@ main {
 }
 
 .highlight {
-  padding: 4px;
   border: 1px solid $light-gray;
   border-radius: 5px;
   * {
