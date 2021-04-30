@@ -93,8 +93,11 @@ main {
   min-height: 100%;
 }
 
-code[class^="language-"] {
-  padding: 0;
+.highlight {
+  padding: 5px;
+  code {
+    padding: 0;
+  }
   .rouge-table {
     margin-bottom: 0;
   }
