@@ -21,6 +21,15 @@
   image-path: /images/projects/generic/npm-logo.png
   link: /projects/arkin
   short-desc: A random NPM utility package
+  featured: false
+  tags:
+    - NPM
+    - JavaScript
+- name: Discord Emoji Converter
+  id: discord-emoji-converter
+  image-path: /images/projects/generic/npm-logo.png
+  link: /projects/discord-emoji-converter
+  short-desc: Convert Discord shortcodes to emojis
   featured: true
   tags:
     - NPM
