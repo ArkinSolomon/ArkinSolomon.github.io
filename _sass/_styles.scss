@@ -202,6 +202,17 @@ main {
   }
 }
 
+#about-text-wrapper {
+  padding: 10px;
+}
+
+#about-arkin-image {
+  @include center-horiz;
+  img {
+    
+  }
+}
+
 #about-title-wrapper {
   padding-top: 20px;
 }
