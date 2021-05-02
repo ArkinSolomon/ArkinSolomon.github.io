@@ -36,9 +36,28 @@ $card-button-width: 70%;
   }
 }
 
+@mixin underline-hover-anchor {
+  a {
+    text-decoration: underline solid $white;
+    color: $black;
+    transition: text-decoration $hover-transition-time ease;
+    &:hover {
+      text-decoration: underline solid $black;
+      color: $black;
+    }
+  }
+}
+
 html, body {
   height: 100%;
   margin: 0;
+}
+
+body.is-reveal-open {
+   overflow: unset !important;
+   #page-wrapper {
+       overflow-y: scroll;
+   }
 }
 
 header {
@@ -50,15 +69,7 @@ header {
   width: 100%;
   position: fixed;
   border-bottom: 1px solid $light-gray;
-  a {
-    text-decoration: underline solid $white;
-    color: $black;
-    transition: text-decoration $hover-transition-time ease;
-    &:hover {
-      text-decoration: underline solid $black;
-      color: $black;
-    }
-  }
+  @include underline-hover-anchor;
   .cell {
     margin-left: 15px;
     margin-right: 15px;
@@ -202,6 +213,10 @@ main {
   }
 }
 
+#about-text-wrapper {
+  padding: 10px;
+}
+
 #about-title-wrapper {
   padding-top: 20px;
 }
@@ -213,6 +228,18 @@ main {
 #about-title {
   @include manrope-font;
   margin-top: 20px;
+}
+
+#about-arkin-image {
+  border-radius: 5px;
+}
+
+#about-links {
+  font-size: 12pt;
+  text-align: center;
+  margin-top: 15px;
+  color: $text-gray;
+  @include underline-hover-anchor;
 }
 
 .all-button-wrapper {
@@ -295,6 +322,16 @@ main {
    border: rgba(0,0,0,0);
    background: rgba(0,0,0,0);
  }
+}
+
+.modal-container {
+  margin: 20px;
+}
+
+.center-horiz-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .center {

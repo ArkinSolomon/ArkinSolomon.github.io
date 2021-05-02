@@ -30,7 +30,16 @@
   image-path: /images/projects/generic/npm-logo.png
   link: /projects/discord-emoji-converter
   short-desc: Convert Discord shortcodes to emojis
-  featured: true
+  featured: false
   tags:
     - NPM
+    - JavaScript
+- name: Zombie Fight
+  id: zombie-fight
+  image-path: /images/projects/zombie-fight/logo.png
+  link: /projects/zombie-fight
+  short-desc: Can you fight off the zombies?
+  featured: true
+  tags:
+    - Game
     - JavaScript
