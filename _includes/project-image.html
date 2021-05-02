@@ -1,0 +1,20 @@
+{% unless img-width %}
+  {% assign img-width = 100 %}
+{% endunless %}
+{% assign modal-id = img-alt | split: ' ' | join: '-' | append: '-modal' %}
+{% assign img-modal-alt = img-alt | append: ' modal' %}
+<style>img[alt="{{ img-alt }}"]{width: {{ img-width }}%;height: auto;}</style>
+<div class="center-horiz-flex">
+  <img data-open="{{ modal-id }}" src="{{ img-path }}" alt="{{ img-alt }}">
+</div>
+<br>
+<div class="reveal" id="{{ modal-id }}" data-reveal>
+  <div class="modal-container">
+    <div class="center-horiz-flex">
+      <img data-open="{{ modal-id }}" src="{{ img-path }}" alt="{{ img-modal-alt }}">
+    </div>
+  </div>
+  <button class="close-button" data-close aria-label="Close modal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
