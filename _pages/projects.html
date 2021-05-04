@@ -17,7 +17,8 @@ subtitle: Check out my finished and ongoing projects.
         {% assign tags = tags | push: checktag %}
       {% endfor %}
     {% endfor %}
-    {% for tag in tags %}
+    {% assign sorted-tags = tags | sort %}
+    {% for tag in sorted-tags %}
       {% include filter-button.html %}
     {% endfor %}
   </div>
