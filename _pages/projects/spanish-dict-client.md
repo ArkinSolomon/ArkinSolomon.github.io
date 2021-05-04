@@ -3,7 +3,7 @@ layout: project
 title: SpanishDict Client
 permalink: /projects/spanish-dict-client
 id: spanish-dict-client
-force-width: 50%
+force-width: 50
 ---
 <div class="callout warning">
   <h6>This project is against SpanishDict's terms of service and has been deprecated. Use the package or any code at your own risk.</h6>

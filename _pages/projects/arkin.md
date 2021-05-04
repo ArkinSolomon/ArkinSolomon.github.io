@@ -3,7 +3,7 @@ layout: project
 title: Arkin
 permalink: /projects/arkin
 id: arkin
-force-width: 50%
+force-width: 50
 ---
 <div class="callout warning">
   <h6>This project/package contains mostly synchronous functions, there is probably better ways to use this.</h6>

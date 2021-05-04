@@ -3,7 +3,7 @@
   image-path: /images/projects/pascals-triangle.png
   link: /projects/pascals-triangle
   short-desc: An infinitely scrolling Pascal's Triangle
-  featured: true
+  featured: false
   tags:
     - HTML
     - JavaScript
@@ -43,3 +43,12 @@
   tags:
     - Game
     - JavaScript
+- name: Cuby
+  id: cuby
+  image-path: /images/projects/cuby/cuby-title-screen.png
+  link: /projects/cuby
+  short-desc: A really bad platformer
+  featured: true
+  tags:
+    - Game
+    - Python

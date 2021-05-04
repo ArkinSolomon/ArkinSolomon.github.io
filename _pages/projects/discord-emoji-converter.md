@@ -3,7 +3,7 @@ layout: project
 title: Discord Emoji Converter
 permalink: /projects/discord-emoji-converter
 id: discord-emoji-converter
-force-width: 50%
+force-width: 50
 ---
 For a Discord bot I was making, I needed to convert Discord emoji shortcodes to emoji characters, so I made an NPM package to do just that. If you don't know, shortcodes look like `\:grin:` and that resolves to 😁, for example. When Discord bots recieve messages, however, the emojis given are in shortcode form, I needed them in character form. I figured other people might also need one, so I built a little NPM package.
 

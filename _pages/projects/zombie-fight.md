@@ -2,8 +2,8 @@
 layout: project
 title: Zombie Fight
 permalink: /projects/zombie-fight
-id: zombie-fightå
-force-width: 48%
+id: zombie-fight
+force-width: 48
 ---
 In 10th grade, I took AP Computer Science Principles. I finished the class really early, I was the only one with coding experience in the class. I was told to start on my final project early and I went overkill. With Node.js and Socket.io made a multiplayer game called Zombie Fight. In it, you are a circle that runs around from green circles, zombies. The game is far from complete, riddled with bugs, and it also has no ending. You just run around healing until your computer crashes or the server crashes from spawning too many zombies.
 
