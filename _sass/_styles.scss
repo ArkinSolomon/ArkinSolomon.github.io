@@ -255,6 +255,8 @@ main {
   border: 1px solid black;
   text-align: center;
   width: 18%;
+  min-width: 130px;
+  max-width: 170px;
   @include black-hover-anchor;
   @include center-horiz;
 }
@@ -304,6 +306,8 @@ main {
     border: 1px solid black;
     text-align: center;
     width: $card-button-width;
+    min-width: 160px;
+    max-width: 180px;
     @include center-horiz;
     @include black-hover-anchor;
   }
@@ -313,7 +317,7 @@ main {
   h3 {
     @include manrope-font;
   }
-  margin-top: 10px;
+  margin-top: 10px; 
 }
 
 .highlight {
