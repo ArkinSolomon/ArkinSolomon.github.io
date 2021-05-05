@@ -23,7 +23,7 @@ subtitle: Check out my finished and ongoing projects.
     {% endfor %}
   </div>
 </div>
-<div class="grid-x">
+<div class="grid-x" data-equalizer>
   {% assign sorted = site.data.projects | sort:"name" %}
   {% for project in sorted %}
     {% assign link = project.link %}
@@ -36,7 +36,7 @@ subtitle: Check out my finished and ongoing projects.
       {% assign tags = tags | append:"'" | append:tag | append:"'," %}
     {% endfor %}
     {% assign tags = tags | append:"]" %}
-    <div class="cell small-12 medium-4 large-4 project-card-cell" data-project-id="{{ project-id }}" data-tags="{{ tags }}">
+    <div class="cell small-12 medium-6 large-4 project-card-cell" data-project-id="{{ project-id }}" data-tags="{{ tags }}" data-equalizer-watch>
       {% include project-card.html %}
     </div>
   {% endfor %}

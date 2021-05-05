@@ -52,3 +52,12 @@
   tags:
     - Game
     - Python
+- name: Tetris
+  id: tetris
+  image-path: /images/projects/tetris/tetris.png
+  link: /projects/tetris
+  short-desc: The classic game of Tetris
+  featured: false
+  tags:
+    - Game
+    - Python

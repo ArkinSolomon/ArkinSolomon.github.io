@@ -5,7 +5,7 @@ permalink: /projects/cuby
 id: cuby
 force-width: 70
 ---
-Platformers are one of the most intermediate projects that people do. The most well known platformer is probably Mario. I too attempted to make a platformer, and I called it, Cuby. In the game, you are a cube in a world of circles that are trying to attack you, pretty simple. I wrote this game in Python using [pygame](https://www.pygame.org/) for my computer programming class final in 11th grade. It has simple features like level unlocks, saves, a level creator.
+Platformers are one of the most intermediate projects that people do. The most well known platformer is probably Mario. I too attempted to make a platformer, and I called it, Cuby. In the game, you are a cube in a world of circles that are trying to attack you, pretty simple. I wrote this game in Python 2 using [Pygame](https://www.pygame.org/) for my Introduction to Computer Programming class final in 11th grade. It has simple features like level unlocks, saves, a level creator.
 
 {% assign img-alt = "Cuby level editor screenshot" %}
 {% assign img-path = "/images/projects/cuby/cuby-game-screenshot.png" %}
