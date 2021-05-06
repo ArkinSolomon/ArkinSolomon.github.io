@@ -1,9 +1,9 @@
 title: Arkin Solomon
-email: arkinsolomon@gmail.com
+email: arkin@arkinsolomon.net
 description: >-
   Arkin Solomon's projects and blogs
 baseurl: ""
-url: "https://arkinsolomon.github.io"
+url: "https://arkinsolomon.net"
 plugins:
   - jekyll-seo-tag
   - jekyll-minifier
