@@ -282,6 +282,7 @@ DEPENDENCIES
   jekyll-feed (~> 0.12)
   jekyll-minifier (~> 0.1.10)
   jekyll-seo-tag
+  jekyll-sitemap (~> 1.4.0)
   jekyll_inline_highlight (~> 3.0)
   tzinfo (~> 1.2)
   tzinfo-data
