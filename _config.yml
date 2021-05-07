@@ -8,6 +8,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-minifier
   - jekyll_inline_highlight
+  - jekyll-sitemap
 destination: '_site'
 include:
   - _pages
