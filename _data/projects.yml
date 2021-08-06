@@ -12,7 +12,7 @@
   image-path: /images/projects/generic/npm-logo.png
   link: /projects/spanish-dict-client
   short-desc: A SpanishDict web-scraper
-  featured: true
+  featured: false
   tags:
     - NPM
     - JavaScript
@@ -61,3 +61,12 @@
   tags:
     - Game
     - Python
+- name: Infinite Mazes
+  id: infinite-mazes
+  image-path: /images/projects/infinite-mazes/infinite-mazes-logo.png
+  link: /projects/infinite-mazes
+  short-desc: Solve as many mazes as you want
+  featured: true
+  tags:
+    - Game
+    - Unity
