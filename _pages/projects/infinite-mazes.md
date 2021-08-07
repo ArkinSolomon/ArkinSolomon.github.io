@@ -18,6 +18,7 @@ This app was intended to be released to iOS via the Apple App Store, however nee
 
 **Note: By downloading this file/application you agree to the [end-user license agreement](/misc/legal/infinite-mazes/infinite-mazes-eula) and the [privacy policy](/misc/legal/infinite-mazes/infinite-mazes-privacy-policy).**
 
-<a href="/downloads/infinite-mazes.ipa" download>Download Infinite Mazes here</a>
+<!--<a href="/downloads/infinite-mazes-1.0.0.ipa" download>Download Infinite Mazes here</a>-->
+*Download coming soon*
 
 You may have to go into settings > general > profile and trust the profile in order to use the app.
