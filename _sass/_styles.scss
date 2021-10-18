@@ -306,7 +306,12 @@ main {
   .grid-y {
     height: 100%;
     position: relative;
-    
+
+    .show-for-small-only {
+      display: block;
+      height: 12px;
+    }
+
     button {
       cursor: pointer;
       height: 50px;
@@ -336,10 +341,14 @@ main {
       color: $white;
 
       &:hover {
-        color: rgb(212, 212, 212);
+        color: #d4d4d4;
       }
     }
   }
+}
+
+#cookie-consent-text {
+  padding-right: 3px;
 }
 
 .all-button-wrapper {
