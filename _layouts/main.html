@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   {% include head.html %}
+
   <body>
     {% include header.html %}
     <div id="page-wrapper">
       {{ content }}
       {% include footer.html %}
     </div>
+    <div id="cookie-consent">
+      <div class="grid-x">
+        <div class="small-12 medium-8 large-8">
+          <h3>Cookies are great!</h3>
+          <p id="cookie-consent-text" class="text-gray">This website collects cookies to analyze traffic so that I can improve the website. You can opt out of these cookies if you would like, see our <a>cookie policy</a>.</p>
+        </div>
+      </div>
+    </div>
   </body>
   <script type="text/javascript">
     $(document).foundation();
   </script>
+
 </html>

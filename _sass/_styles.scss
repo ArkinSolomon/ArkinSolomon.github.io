@@ -29,6 +29,7 @@ $card-button-width: 70%;
   text-decoration: none;
   color: $black;
   transition: $hover-transition-time;
+
   &:hover {
     color: $white;
     background-color: $black;
@@ -41,6 +42,7 @@ $card-button-width: 70%;
     text-decoration: underline solid $white;
     color: $black;
     transition: text-decoration $hover-transition-time ease;
+
     &:hover {
       text-decoration: underline solid $black;
       color: $black;
@@ -48,16 +50,18 @@ $card-button-width: 70%;
   }
 }
 
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
 }
 
 body.is-reveal-open {
-   overflow: unset !important;
-   #page-wrapper {
-       overflow-y: scroll;
-   }
+  overflow: unset !important;
+
+  #page-wrapper {
+    overflow-y: scroll;
+  }
 }
 
 header {
@@ -70,15 +74,18 @@ header {
   position: fixed;
   border-bottom: 1px solid $light-gray;
   @include underline-hover-anchor;
+
   .cell {
     margin-left: 15px;
     margin-right: 15px;
+
     .links-container {
       height: 100%;
       width: 100%;
       display: flex;
       align-items: center;
       justify-content: flex-end;
+
       a {
         margin-left: 8px;
         padding-left: 4px;
@@ -91,12 +98,13 @@ header {
 }
 
 footer {
-    position: relative;
-    min-height: 50px;
-    text-align: center;
-    hr {
-      width: $content-wrapper-width;
-    }
+  position: relative;
+  min-height: 50px;
+  text-align: center;
+
+  hr {
+    width: $content-wrapper-width;
+  }
 }
 
 main {
@@ -106,9 +114,11 @@ main {
 .highlight {
   background-color: inherit;
   padding: 5px;
+
   code {
     padding: 0;
   }
+
   .rouge-table {
     margin-bottom: 0;
   }
@@ -117,6 +127,7 @@ main {
 #footer-text {
   color: $light-gray;
   margin-top: 15px;
+
   a {
     color: $light-gray;
     text-decoration: underline;
@@ -138,12 +149,15 @@ main {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+
   #center-wrapper {
     width: 100%;
+
     h1 {
       @include manrope-font;
       font-size: 45pt;
     }
+
     h5 {
       @include manrope-font;
       margin-top: 5px;
@@ -165,37 +179,55 @@ main {
   * {
     @include manrope-font;
   }
+
   padding-top: 20px;
+
   h6 {
     color: $dark-gray;
   }
 }
 
 #project-content {
-  h1, h2, h3, h4, h5, h6 {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @include manrope-font;
   }
+
   margin-top: 30px;
   color: $text-gray;
 }
 
 #projects-header {
   margin-top: 15px;
-  h1, h2, h3, h4, h5, h6 {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @include manrope-font;
   }
 }
 
 #tag-filter-container {
   display: block;
+
   div {
     display: inline;
+
     .button-toggle {
       color: $white;
       background-color: $black;
       text-decoration: none;
       border: 1px solid $black;
     }
+
     a {
       margin-left: 3px;
       margin-right: 3px;
@@ -207,6 +239,7 @@ main {
       text-decoration: none;
       color: $black;
       border: 1px solid $white;
+
       &:hover {
         border: 1px solid $black;
       }
@@ -220,10 +253,6 @@ main {
 
 #about-title-wrapper {
   padding-top: 20px;
-}
-
-#about-text {
-  color: $text-gray;
 }
 
 #about-title {
@@ -241,6 +270,26 @@ main {
   margin-top: 15px;
   color: $text-gray;
   @include underline-hover-anchor;
+}
+
+#cookie-consent {
+  background-color: $white;
+  width: 100%;
+  bottom: 0;
+  height: 13%;
+  position: fixed;
+  border-top: 1px solid $black;
+  padding: 14px;
+  a {
+    color: inherit;
+    text-decoration: underline;
+    &:visited {
+      text-decoration: underline;
+    }
+  }
+  p {
+    font-size: 10pt;
+  }
 }
 
 .all-button-wrapper {
@@ -270,34 +319,46 @@ main {
   margin-bottom: 10px;
 }
 
+.text-gray {
+  color: $text-gray;
+}
+
 .project-card {
   border-radius: 5px;
   border: 1px solid black;
   padding: 0;
   margin: 10px;
   height: 95%;
-  &> img, &> h5 {
+
+  &>img,
+  &>h5 {
     @include manrope-font;
     width: 100%;
     display: block;
   }
+
   img {
     padding: 8px;
     border-radius: 4px;
     height: 200px;
     object-fit: contain;
   }
-  h5, &> p {
+
+  h5,
+  &>p {
     padding-left: 5px;
   }
-  &> p {
+
+  &>p {
     color: $dark-gray;
     font-size: 10pt;
   }
-  &> .anchor-wrapper {
+
+  &>.anchor-wrapper {
     margin: 0;
     margin-bottom: 10px;
   }
+
   a {
     padding: 4px;
     padding-left: 5px;
@@ -317,16 +378,18 @@ main {
   h3 {
     @include manrope-font;
   }
-  margin-top: 10px; 
+
+  margin-top: 10px;
 }
 
 .highlight {
   border: 1px solid $light-gray;
   border-radius: 5px;
+
   * {
-   border: rgba(0,0,0,0);
-   background: rgba(0,0,0,0);
- }
+    border: rgba(0, 0, 0, 0);
+    background: rgba(0, 0, 0, 0);
+  }
 }
 
 .modal-container {
