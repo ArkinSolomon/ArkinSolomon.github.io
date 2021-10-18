@@ -6,7 +6,7 @@ id: arkin
 force-width: 50
 ---
 <div class="callout warning">
-  <h6>This project/package contains mostly synchronous functions, there is probably better ways to use this.</h6>
+  <h6>This project/package contains mostly synchronous functions, there is probably better ways to implement this.</h6>
 </div>
 
 My first NPM package was Arkin, named after me, Arkin. I mostly built it to learn how to make an publish NPM packages, I was still learning a lot about JavaScript when I made it, so I didn't realize that I didn't need to make complex functions, yet for some reason this is my most downloaded package with over 3,000 downloads.

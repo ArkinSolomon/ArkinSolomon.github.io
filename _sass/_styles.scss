@@ -25,7 +25,7 @@ $card-button-width: 70%;
   margin: 0 auto;
 }
 
-@mixin black-hover-anchor {
+@mixin black-hover {
   text-decoration: none;
   color: $black;
   transition: $hover-transition-time;
@@ -33,6 +33,18 @@ $card-button-width: 70%;
   &:hover {
     color: $white;
     background-color: $black;
+    text-decoration: none;
+  }
+}
+
+@mixin white-hover {
+  text-decoration: none;
+  color: $white;
+  transition: $hover-transition-time;
+
+  &:hover {
+    color: $black;
+    background-color: $white;
     text-decoration: none;
   }
 }
@@ -91,7 +103,7 @@ header {
         padding-left: 4px;
         padding-right: 4px;
         border-radius: 3px;
-        @include black-hover-anchor;
+        @include black-hover;
       }
     }
   }
@@ -273,22 +285,57 @@ main {
 }
 
 #cookie-consent {
+  @include manrope-font;
   background-color: $white;
   width: 100%;
   bottom: 0;
-  height: 13%;
+  height: 14vh;
   position: fixed;
   border-top: 1px solid $black;
   padding: 14px;
+
   a {
     color: inherit;
     text-decoration: underline;
-    &:visited {
-      text-decoration: underline;
-    }
   }
+
   p {
     font-size: 10pt;
+  }
+
+  .grid-y {
+    height: 100%;
+    
+    button {
+      cursor: pointer;
+      height: 50px;
+      text-align: center;
+      display: block;
+      border: 1px solid $black;
+      border-radius: 5px;
+      padding: 4px;
+      padding-left: 8px;
+      font-size: 13pt;
+    }
+
+    .button-white {
+      background-color: $white;
+      color: $black;
+
+      &:hover {
+        color: $dark-gray;
+        border: 1px solid $dark-gray;
+      }
+    }
+
+    .button-black {
+      background-color: $black;
+      color: $white;
+
+      &:hover {
+        color: rgb(212, 212, 212);
+      }
+    }
   }
 }
 
@@ -306,7 +353,7 @@ main {
   width: 18%;
   min-width: 130px;
   max-width: 170px;
-  @include black-hover-anchor;
+  @include black-hover;
   @include center-horiz;
 }
 
@@ -370,7 +417,7 @@ main {
     min-width: 160px;
     max-width: 180px;
     @include center-horiz;
-    @include black-hover-anchor;
+    @include black-hover;
   }
 }
 
@@ -404,4 +451,8 @@ main {
 
 .center {
   @include centerer;
+}
+
+.cookie-heading {
+  color: $black;
 }
