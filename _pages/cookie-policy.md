@@ -24,4 +24,4 @@ Arkinsolomon.net sets first-party cookies provided by Google Analytics in order 
 When you deny cookies, this site will disable Google Analytics completly, the site will set no cookies, no data will be remembered across sessions or pages. This does mean that every page will prompt for cookies.
 
 <h4 class="cookie-heading">I want to opt-out of cookies, how can I do that?</h4>
-If you already accepted cookies, and would like to opt-out, you can do so by clearing cookies, and denying when prompted, or you can click <a>here</a> to deny all cookies. If you would like to opt-in again, just press accept cookies when prompted.
+If you already accepted cookies, and would like to opt-out, you can do so by clearing cookies, and denying when prompted, or you can click <a onClick="denyCookie()">here</a> to deny all cookies. If you would like to opt-in again, just press accept cookies when prompted.
