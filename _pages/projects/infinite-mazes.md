@@ -14,11 +14,4 @@ The game is built on the Unity Engine using C#. The maze works by displaying mul
 
 I didn't experience too many bugs, the main one that I experienced was that whenever you click a UI element, you would also interact with the maze behind it. This was fixed simply by checking if the button was pressed down currently, or on the previous frame. Another issue I came across was UI scaling. iPads were my main issue here. The aspect ratio was more square-like than that of iPhones, which were my main test devices. Fixing it was not too bad, I simply created a few scripts for auto-scaling images linearly based on aspect ratio, and I used a vertical stack for the EULA screen.
 
-This app was intended to be released to iOS via the Apple App Store, however needing to be 18 to create a developer account, I decided to wait a few months before releasing it on the App Store. I am releasing it here as I am quite proud of the app and would like to make it available to the public. I will not release the code, but I will have an IPA file publicly available through this website until I release it on the Apple App Store.
-
-**Note: By downloading this file/application you agree to the [end-user license agreement](/misc/legal/infinite-mazes/infinite-mazes-eula) and the [privacy policy](/misc/legal/infinite-mazes/infinite-mazes-privacy-policy).**
-
-<!--<a href="/downloads/infinite-mazes-1.0.0.ipa" download>Download Infinite Mazes here</a>-->
-*Download coming soon*
-
-You may have to go into settings > general > profile and trust the profile in order to use the app.
+This app will soon be available on the app store. It has been sitting in GitHub for months, since I had to be 18 to publish. I will update this website when it is published.
