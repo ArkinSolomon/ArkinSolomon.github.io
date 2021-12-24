@@ -16,6 +16,6 @@ The game is built on the Unity Engine using C#. The maze works by displaying mul
 
 I didn't experience too many bugs, the main one that I experienced was that whenever you click a UI element, you would also interact with the maze behind it. This was fixed simply by checking if the button was pressed down currently, or on the previous frame. Another issue I came across was UI scaling. iPads were my main issue here. The aspect ratio was more square-like than that of iPhones, which were my main test devices. Fixing it was not too bad, I simply created a few scripts for auto-scaling images linearly based on aspect ratio.
 
-This app will soon be available on the Apple app store. I have plans to try to release it over Christmas, and I will update here if I do. It has been sitting in GitHub for months, since I had to be 18 to publish it. I will update this website with the link when it is published on the app store.
+This app is available on the Apple app store. It has been sitting in GitHub for months, since I had to be 18 to publish it. Since I am 18 now, it has been published, and you can [download Infinite Mazes](https://apps.apple.com/us/app/infinite-mazes/id1598435144).
 
 **For questions email [arkin@arkinsolomon.net](mailto:arkin@arkinsolomon.net)**.
