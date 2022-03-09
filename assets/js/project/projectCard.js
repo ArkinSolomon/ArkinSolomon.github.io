@@ -2,7 +2,7 @@
 class ProjectCard {
 
   //Class constructor
-  constructor(index, elem){
+  constructor(index, elem) {
 
     //Set object properties
     this._index = index;
@@ -16,13 +16,15 @@ class ProjectCard {
 
     //Get references to tag objects
     this.tags = {};
-    for (let tag of tags) this.tags[tag] = getTag(tag);
+    for (let tag of tags)
+      this.tags[tag] = getTag(tag);
   }
 
-  //Returns true if one or more tags that this card has are displayed
-  canShow(){
-    for (let tag of Object.values(this.tags)){
-      if (tag.enabled) return true;
+  //Returns true if one or more tags that this card has are displayed, or if all tags are the same
+  canShow() {
+    for (let tag of Object.values(this.tags)) {
+      if (tag.enabled)
+        return true;
     }
     return false;
   }

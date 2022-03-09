@@ -10,7 +10,7 @@ $(document).ready(() => {
   });
 
   //Add a listener to each button
-  $('.toggleable').click(function() {
+  $('.toggleable').click(function () {
 
     //Toggle the class
     $(this).toggleClass('button-toggle');
@@ -21,10 +21,14 @@ $(document).ready(() => {
     $(this).prop('data-toggled', active);
     getTag(tagName).enabled = active;
 
+    //True if all tags are enabled or all are disabled
+    const allSame = Object.values(window.globalTags)
+      .map(t => t.enabled)
+      .every((v, i, arr) => v === arr[0]);
+
     //Check all cards
     projectCards.forEach(card => {
-      $(card.elem).css('display', card.canShow() ? 'block' : 'none')
+      $(card.elem).css('display', card.canShow() || allSame ? 'block' : 'none')
     });
-
   });
 });
