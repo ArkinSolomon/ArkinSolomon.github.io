@@ -2,6 +2,9 @@
 layout: none
 ---
 User-agent: *
+
 Disallow: /misc
+
 Disallow: /app-ads.txt
+
 Sitemap: {{ site.url }}/sitemap.xml
