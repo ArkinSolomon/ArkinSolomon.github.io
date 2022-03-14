@@ -1,11 +1,14 @@
 @charset 'UTF-8';
 @import 'themes';
+@import 'default-code';
+@import 'dark-code';
 
 $light-gray: #9c9c9c;
 $dark-gray: #505050;
 $text-gray: #474747;
 $content-wrapper-width: 60%;
 $hover-transition-time: .3s;
+$theme-transition-time: .24s;
 $card-button-width: 70%;
 
 @mixin manrope-font {
@@ -14,7 +17,7 @@ $card-button-width: 70%;
 
 //Short hand mixins for theme colors used for elements commonly
 @mixin text-color {
-  transition: color .1s ease;
+  transition: color $theme-transition-time ease;
 
   @include themed() {
     color: t('text-body');
@@ -22,7 +25,7 @@ $card-button-width: 70%;
 }
 
 @mixin hc-color-text {
-  transition: color .1s ease;
+  transition: color $theme-transition-time ease;
 
   @include themed() {
     color: t('hc-color');
@@ -30,7 +33,7 @@ $card-button-width: 70%;
 }
 
 @mixin mc-color-text {
-  transition: color .1s ease;
+  transition: color $theme-transition-time ease;
 
   @include themed() {
     color: t('mc-color');
@@ -38,7 +41,7 @@ $card-button-width: 70%;
 }
 
 @mixin lc-color-text {
-  transition: color .1s ease;
+  transition: color $theme-transition-time ease;
 
   @include themed() {
     color: t('lc-color');
@@ -46,7 +49,7 @@ $card-button-width: 70%;
 }
 
 @mixin background-color {
-  transition: background-color .1s ease;
+  transition: background-color $theme-transition-time ease;
 
   @include themed() {
     background: t('background');
@@ -146,7 +149,6 @@ header {
 
   #main-title {
     @include manrope-font;
-    @include background-color;
 
     @include themed() {
       color: t('hc-color');
@@ -208,19 +210,6 @@ main {
   h3,
   h2 {
     @include hc-color-text;
-  }
-}
-
-.highlight {
-  background-color: inherit;
-  padding: 5px;
-
-  code {
-    padding: 0;
-  }
-
-  .rouge-table {
-    margin-bottom: 0;
   }
 }
 
@@ -343,6 +332,7 @@ main {
       border-radius: 3px;
 
       @include hc-color-text;
+
       @include themed() {
         border: 1px solid t('background');
       }
@@ -587,4 +577,15 @@ main {
   -moz-transition: none !important;
   -o-transition: none !important;
   transition: none !important;
+}
+
+.reveal {
+  @include background-color;
+  @include themed () {
+    border: 1px solid t('lc-color');
+  }
+
+  span {
+    background-color: transparent !important;
+  }
 }

@@ -18,6 +18,6 @@ I didn't experience too many bugs, the main one that I experienced was that when
 
 **Update: 3/9/2022:** I have since added colors as well, which can be unlocked by solving enough mazes, or by solving them fast enough. I have also relased the app on the Google Play Store (see below).
 
-This app is available on the Apple app store, as well as the Google Play store. It has been sitting in GitHub for months, since I had to be 18 to publish it. Since I am 18 now, it has been published, and you can download Infinite Mazes on [the Apple app store](https://apps.apple.com/us/app/infinite-mazes/id1598435144) or [the Google Play store](https://i-dont-have-a-link-yet).
+This app is available on the Apple app store, as well as the Google Play store. It has been sitting in GitHub for months, since I had to be 18 to publish it. Since I am 18 now, it has been published, and you can download Infinite Mazes on [the Apple app store](https://apps.apple.com/us/app/infinite-mazes/id1598435144) or [the Google Play store](https://play.google.com/store/apps/details?id=com.ArkinSolomon.InfiniteMazes).
 
 **For questions email [arkin@arkinsolomon.net](mailto:arkin@arkinsolomon.net)**.
