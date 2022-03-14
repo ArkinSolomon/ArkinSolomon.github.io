@@ -52,6 +52,7 @@ This function would look better like this:
  * @returns {Boolean} True if the function evaluates that the string is 'true' or if a number string or float string is greater than zero.
  */
 exports.toBoolean = function(boolIn){
+  boolIn = boolIn.toLowerCase();
 
   //Check if the provided string is 'true' or 'false'
   if (boolIn === 'true' || boolIn === 'false') return boolIn === 'true';
@@ -59,7 +60,7 @@ exports.toBoolean = function(boolIn){
   //Parse the string if it is a float or number
   let boolInOrig = boolIn;
   boolIn = boolIn.replace(',', '.');
-  boolInFloat = parseFloat(boolIn);
+  boolInFloat = parseFloat(boolIn, 10);
 
   //Check if the string was even a number
   if (isNaN(boolIn)) return false;

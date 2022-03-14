@@ -1,16 +1,71 @@
 @charset 'UTF-8';
+@import 'themes';
+@import 'default-code';
+@import 'dark-code';
 
-$white: #ffffff;
-$black: #000000;
 $light-gray: #9c9c9c;
 $dark-gray: #505050;
 $text-gray: #474747;
 $content-wrapper-width: 60%;
 $hover-transition-time: .3s;
+$theme-transition-time: .24s;
 $card-button-width: 70%;
 
 @mixin manrope-font {
   font-family: 'Manrope', sans-serif;
+}
+
+//Short hand mixins for theme colors used for elements commonly
+@mixin text-color {
+  transition: color $theme-transition-time ease;
+
+  @include themed() {
+    color: t('text-body');
+  }
+}
+
+@mixin hc-color-text {
+  transition: color $theme-transition-time ease;
+
+  @include themed() {
+    color: t('hc-color');
+  }
+}
+
+@mixin mc-color-text {
+  transition: color $theme-transition-time ease;
+
+  @include themed() {
+    color: t('mc-color');
+  }
+}
+
+@mixin lc-color-text {
+  transition: color $theme-transition-time ease;
+
+  @include themed() {
+    color: t('lc-color');
+  }
+}
+
+@mixin background-color {
+  transition: background-color $theme-transition-time ease;
+
+  @include themed() {
+    background: t('background');
+  }
+}
+
+@mixin hc-background {
+  @include themed() {
+    background-color: t('hc-color');
+  }
+}
+
+@mixin hc-border-1px {
+  @include themed() {
+    border: 1px solid t('hc-color');
+  }
 }
 
 @mixin centerer {
@@ -25,39 +80,36 @@ $card-button-width: 70%;
   margin: 0 auto;
 }
 
-@mixin black-hover {
+@mixin invert-hover {
   text-decoration: none;
-  color: $black;
   transition: $hover-transition-time;
 
-  &:hover {
-    color: $white;
-    background-color: $black;
-    text-decoration: none;
-  }
-}
-
-@mixin white-hover {
-  text-decoration: none;
-  color: $white;
-  transition: $hover-transition-time;
+  @include hc-color-text;
 
   &:hover {
-    color: $black;
-    background-color: $white;
     text-decoration: none;
+
+    @include themed() {
+      background-color: t('hc-color');
+      color: t('background')
+    }
   }
 }
 
 @mixin underline-hover-anchor {
   a {
-    text-decoration: underline solid $white;
-    color: $black;
     transition: text-decoration $hover-transition-time ease;
+    text-decoration: none;
+
+    @include hc-color-text;
 
     &:hover {
-      text-decoration: underline solid $black;
-      color: $black;
+      @include themed() {
+        text-decoration: underline solid t('hc-color');
+        -webkit-text-decoration: underline solid t('hc-color');
+      }
+
+      @include hc-color-text;
     }
   }
 }
@@ -66,6 +118,7 @@ html,
 body {
   height: 100%;
   margin: 0;
+  padding: 0;
 }
 
 body.is-reveal-open {
@@ -77,19 +130,35 @@ body.is-reveal-open {
 }
 
 header {
-  @include manrope-font;
   z-index: 1000;
-  background-color: $white;
   padding-top: 5px;
   padding-bottom: 5px;
   width: 100%;
   position: fixed;
-  border-bottom: 1px solid $light-gray;
-  @include underline-hover-anchor;
+
+  @include background-color;
+  @include hc-color-text;
+
+  @include themed() {
+    border-bottom: 1px solid t('lc-color');
+  }
+
+  h3 {
+    @include underline-hover-anchor;
+  }
+
+  #main-title {
+    @include manrope-font;
+
+    @include themed() {
+      color: t('hc-color');
+    }
+  }
 
   .cell {
     margin-left: 15px;
     margin-right: 15px;
+    @include manrope-font;
 
     .links-container {
       height: 100%;
@@ -98,12 +167,25 @@ header {
       align-items: center;
       justify-content: flex-end;
 
+      button {
+        img {
+          height: 22px;
+        }
+
+        &:hover {
+          @include themed() {
+            filter: invert(30%) sepia(8%) saturate(0%) hue-rotate(222deg) brightness(102%) contrast(99%);
+            -webkit-filter: invert(30%) sepia(8%) saturate(0%) hue-rotate(222deg) brightness(102%) contrast(99%);
+          }
+        }
+      }
+
       a {
         margin-left: 8px;
         padding-left: 4px;
         padding-right: 4px;
         border-radius: 3px;
-        @include black-hover;
+        @include invert-hover;
       }
     }
   }
@@ -113,6 +195,8 @@ footer {
   position: relative;
   min-height: 50px;
   text-align: center;
+  padding: 0;
+  margin: 0;
 
   hr {
     width: $content-wrapper-width;
@@ -121,27 +205,20 @@ footer {
 
 main {
   min-height: 100%;
-}
+  @include background-color;
 
-.highlight {
-  background-color: inherit;
-  padding: 5px;
-
-  code {
-    padding: 0;
-  }
-
-  .rouge-table {
-    margin-bottom: 0;
+  h3,
+  h2 {
+    @include hc-color-text;
   }
 }
 
 #footer-text {
-  color: $light-gray;
   margin-top: 15px;
+  @include lc-color-text;
 
   a {
-    color: $light-gray;
+    @include lc-color-text;
     text-decoration: underline;
   }
 }
@@ -152,8 +229,8 @@ main {
 }
 
 #home-title {
-  background-color: $black;
-  color: $white;
+  background-color: black;
+  color: white;
   height: 75vh;
   width: 100%;
   display: flex;
@@ -181,6 +258,7 @@ main {
   margin: 0;
   padding: 0;
   border-width: 0;
+  @include background-color;
 }
 
 #header-padding {
@@ -188,18 +266,20 @@ main {
 }
 
 #project-title {
+  padding-top: 20px;
+
   * {
     @include manrope-font;
   }
 
-  padding-top: 20px;
-
   h6 {
-    color: $dark-gray;
+    @include mc-color-text;
   }
 }
 
 #project-content {
+  margin-top: 30px;
+  @include text-color;
 
   h1,
   h2,
@@ -209,9 +289,6 @@ main {
   h6 {
     @include manrope-font;
   }
-
-  margin-top: 30px;
-  color: $text-gray;
 }
 
 #projects-header {
@@ -234,10 +311,15 @@ main {
     display: inline;
 
     .button-toggle {
-      color: $white;
-      background-color: $black;
+      color: white;
       text-decoration: none;
-      border: 1px solid $black;
+
+      @include hc-border-1px();
+      @include hc-background();
+
+      @include themed() {
+        color: t('background');
+      }
     }
 
     a {
@@ -248,12 +330,15 @@ main {
       padding-top: 3px;
       padding-bottom: 3px;
       border-radius: 3px;
-      text-decoration: none;
-      color: $black;
-      border: 1px solid $white;
+
+      @include hc-color-text;
+
+      @include themed() {
+        border: 1px solid t('background');
+      }
 
       &:hover {
-        border: 1px solid $black;
+        @include hc-border-1px;
       }
     }
   }
@@ -285,14 +370,22 @@ main {
 }
 
 #cookie-consent {
-  @include manrope-font;
-  background-color: $white;
   width: 100%;
   bottom: 0;
   position: fixed;
-  border-top: 1px solid $black;
   padding: 14px;
   padding-bottom: 0;
+
+  @include themed() {
+    border-top: 1px solid t('hc-color');
+  }
+
+  @include manrope-font;
+  @include background-color;
+
+  h3 {
+    @include hc-color-text;
+  }
 
   a {
     color: inherit;
@@ -317,31 +410,38 @@ main {
       height: 50px;
       text-align: center;
       display: block;
-      border: 1px solid $black;
       border-radius: 5px;
       padding: 4px;
       padding-left: 8px;
       font-size: 13pt;
       display: block;
+
       @include center-horiz;
+      @include hc-border-1px;
     }
 
-    .button-white {
-      background-color: $white;
-      color: $black;
+    .button-left {
+      @include background-color;
+      @include hc-color-text;
 
       &:hover {
-        color: $dark-gray;
-        border: 1px solid $dark-gray;
+        @include themed() {
+          border: 1px solid t('mc-color')
+        }
+
+        @include mc-color-text;
       }
     }
 
-    .button-black {
-      background-color: $black;
-      color: $white;
+    .button-right {
+      @include hc-background;
+
+      @include themed() {
+        color: t('background')
+      }
 
       &:hover {
-        color: #d4d4d4;
+        @include lc-color-text;
       }
     }
   }
@@ -360,13 +460,14 @@ main {
   padding-left: 5px;
   padding-right: 5px;
   border-radius: 15px;
-  border: 1px solid black;
   text-align: center;
   width: 18%;
   min-width: 130px;
   max-width: 170px;
-  @include black-hover;
+
+  @include invert-hover;
   @include center-horiz;
+  @include hc-border-1px;
 }
 
 .rel {
@@ -378,20 +479,22 @@ main {
   margin-bottom: 10px;
 }
 
-.text-gray {
-  color: $text-gray;
+.text-color {
+  @include text-color;
 }
 
 .project-card {
   border-radius: 5px;
-  border: 1px solid black;
   padding: 0;
   margin: 10px;
   height: 95%;
 
+  @include hc-border-1px;
+
   &>img,
   &>h5 {
     @include manrope-font;
+    @include hc-color-text;
     width: 100%;
     display: block;
   }
@@ -409,7 +512,7 @@ main {
   }
 
   &>p {
-    color: $dark-gray;
+    @include mc-color-text;
     font-size: 10pt;
   }
 
@@ -423,22 +526,22 @@ main {
     padding-left: 5px;
     padding-right: 5px;
     border-radius: 15px;
-    border: 1px solid black;
     text-align: center;
     width: $card-button-width;
     min-width: 160px;
     max-width: 180px;
     @include center-horiz;
-    @include black-hover;
+    @include invert-hover;
+    @include hc-border-1px;
   }
 }
 
 .home-section {
+  margin-top: 10px;
+
   h3 {
     @include manrope-font;
   }
-
-  margin-top: 10px;
 }
 
 .highlight {
@@ -446,8 +549,8 @@ main {
   border-radius: 5px;
 
   * {
-    border: rgba(0, 0, 0, 0);
-    background: rgba(0, 0, 0, 0);
+    @include hc-border-1px;
+    @include hc-background;
   }
 }
 
@@ -466,5 +569,23 @@ main {
 }
 
 .cookie-heading {
-  color: $black;
+  @include hc-color-text;
+}
+
+.notransition {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
+}
+
+.reveal {
+  @include background-color;
+  @include themed () {
+    border: 1px solid t('lc-color');
+  }
+
+  span {
+    background-color: transparent !important;
+  }
 }

@@ -16,6 +16,8 @@ The game is built on the Unity Engine using C#. The maze works by displaying mul
 
 I didn't experience too many bugs, the main one that I experienced was that whenever you click a UI element, you would also interact with the maze behind it. This was fixed simply by checking if the button was pressed down currently, or on the previous frame. Another issue I came across was UI scaling. iPads were my main issue here. The aspect ratio was more square-like than that of iPhones, which were my main test devices. Fixing it was not too bad, I simply created a few scripts for auto-scaling images linearly based on aspect ratio.
 
-This app is available on the Apple app store. It has been sitting in GitHub for months, since I had to be 18 to publish it. Since I am 18 now, it has been published, and you can [download Infinite Mazes](https://apps.apple.com/us/app/infinite-mazes/id1598435144).
+**Update: 3/9/2022:** I have since added colors as well, which can be unlocked by solving enough mazes, or by solving them fast enough. I have also relased the app on the Google Play Store (see below).
+
+This app is available on the Apple app store, as well as the Google Play store. It has been sitting in GitHub for months, since I had to be 18 to publish it. Since I am 18 now, it has been published, and you can download Infinite Mazes on [the Apple app store](https://apps.apple.com/us/app/infinite-mazes/id1598435144) or [the Google Play store](https://play.google.com/store/apps/details?id=com.ArkinSolomon.InfiniteMazes).
 
 **For questions email [arkin@arkinsolomon.net](mailto:arkin@arkinsolomon.net)**.
