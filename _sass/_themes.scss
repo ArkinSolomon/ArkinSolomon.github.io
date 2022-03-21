@@ -5,15 +5,18 @@ $themes: (default: (theme-filter:invert(64%) sepia(0%) saturate(1874%) hue-rotat
     mc-color: #505050,
     lc-color: #9c9c9c,
     text-body: #474747,
-
-  ),
+    th-background: #ebebeb,
+    odd-row: #f8f8f8,
+    even-row: #f1f1f1),
   dark: (theme-filter: invert(30%) sepia(8%) saturate(0%) hue-rotate(222deg) brightness(102%) contrast(99%),
     background: #111111,
     hc-color: #e7e7e7,
     mc-color: #afafaf,
     lc-color: #5f5f5f,
     text-body: #e0e0e0,
-  ),
+    th-background: #141414,
+    odd-row: #1f1f1f,
+    even-row: #242424),
 );
 
 @mixin themed() {

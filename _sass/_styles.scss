@@ -213,6 +213,30 @@ main {
   }
 }
 
+table,
+thead {
+
+  @include text-color;
+
+  tr:nth-child(odd) {
+    @include themed() {
+      background-color: t('odd-row');
+    }
+  }
+
+  tr:nth-child(even) {
+    @include themed() {
+      background-color: t('even-row');
+    }
+  }
+}
+
+thead>tr {
+  @include themed() {
+    background-color: t('th-background') !important;
+  }
+}
+
 #footer-text {
   margin-top: 15px;
   @include lc-color-text;
@@ -581,6 +605,7 @@ main {
 
 .reveal {
   @include background-color;
+
   @include themed () {
     border: 1px solid t('lc-color');
   }
