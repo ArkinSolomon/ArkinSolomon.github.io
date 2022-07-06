@@ -39,7 +39,7 @@
   image-path: /images/projects/zombie-fight/logo.png
   link: /projects/zombie-fight
   short-desc: Can you fight off the zombies?
-  featured: true
+  featured: false
   tags:
     - Game
     - JavaScript
@@ -70,3 +70,12 @@
   tags:
     - Game
     - Unity
+- name: Wordle Solver
+  id: wordle-solver
+  image-path: /images/projects/wordle-solver/wordle-solver-main.png
+  link: /projects/wordle-solver
+  short-desc: Automatically solve wordles
+  featured: true
+  tags:
+    - React
+    - JavaScript
