@@ -1,0 +1,1 @@
+class ProjectCard{constructor(t,a){this._index=t,this.elem=a,this.id=e=$(a).data("project-id");var e=$(a).data("tags");e=e.replace(/'/g,'"').replace(",]","]");var r=JSON.parse(e);this.tags={};for(let t of r)this.tags[t]=getTag(t)}canShow(){for(let t of Object.values(this.tags))if(t.enabled)return!0;return!1}}

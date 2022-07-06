@@ -1,0 +1,1 @@
+function getTag(a){return globalTags[a]||(globalTags[a]=new Tag(a)),globalTags[a]}class Tag{constructor(a){this.tag=a,this.enabled=!1}}const globalTags={};window.globalTags=globalTags;
