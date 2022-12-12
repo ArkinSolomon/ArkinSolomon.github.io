@@ -3,7 +3,6 @@ on:
   push:
     branches:
       - master
-      - develop
   workflow_dispatch:
 
 jobs:
@@ -26,7 +25,6 @@ jobs:
           ls -la
 
           cp -a _site/. ../tmp/
-          cp -R .git/ ../tmp/
           rm -rf *
           cp -a ../tmp/. .
 
