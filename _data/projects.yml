@@ -16,15 +16,6 @@
   tags:
     - NPM
     - JavaScript
-- name: Arkin
-  id: arkin
-  image-path: /images/projects/generic/npm-logo.png
-  link: /projects/arkin
-  short-desc: A random NPM utility package
-  featured: false
-  tags:
-    - NPM
-    - JavaScript
 - name: Discord Emoji Converter
   id: discord-emoji-converter
   image-path: /images/projects/generic/npm-logo.png
