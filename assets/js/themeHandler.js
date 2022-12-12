@@ -27,7 +27,6 @@ $(function () {
 
     //Set the theme cookie
     if (getCookie('c_pref').length) {
-      console.log('dark');
       setCookie('theme', isDark ? 'dark' : 'light', 365);
     }
   });

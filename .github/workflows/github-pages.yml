@@ -10,9 +10,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: helaili/jekyll-action@v2
-        with:
-          token: ${{ secrets.GH_TOKEN }}
-          jekyll_build_options: '-V'
-          pre_build_commands: apk add --update nodejs npm python3; chmod +x liquidHighlight.py; ./liquidHighlight.py; rm liquidHighlight.py
-          target_branch: 'gh-pages'
+      - name: Build site
+        run: |
+          apk update
+          apk add ruby
+          git branch test-branch
+          bundle install
+          bundle exec jekyll build
+          git add * -f
+          git commit -m "Build site" 
+          git push --force origin test-branch
