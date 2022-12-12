@@ -31,6 +31,6 @@ jobs:
 
           git config user.name 'github-actions[bot]'
           git config user.email 'github-actions[bot]@users.noreply.github.com'
-          git add * -f
+          git add *
           git commit -m "Build site" 
-          git push --force origin test-branch
+          git push origin test-branch -f
