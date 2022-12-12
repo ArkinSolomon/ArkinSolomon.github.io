@@ -18,7 +18,7 @@ jobs:
           git branch test-branch
           bundle install
           bundle exec jekyll build
-          rm -v !("_site")
+          find . ! -name '_site' -type d -exec rm -rf {} +
           cp _site/* ..
           git config user.name 'github-actions[bot]'
           git config user.email 'github-actions[bot]@users.noreply.github.com'
