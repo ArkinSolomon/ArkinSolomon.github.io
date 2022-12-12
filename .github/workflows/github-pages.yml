@@ -22,8 +22,10 @@ jobs:
 
           mkdir -p ../tmp/.git
 
+          ls -la
+
           cp -a _site/. ../tmp/
-          cp -a .git/. ../tmp/.git/
+          cp .git/ ../tmp
           rm -rf *
           cp -a ../tmp/. .
 
