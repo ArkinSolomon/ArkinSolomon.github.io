@@ -28,9 +28,7 @@ jobs:
 
           touch .nojekyll
           ls -al
-
-          git config user.name 'github-actions[bot]'
-          git config user.email 'github-actions[bot]@users.noreply.github.com'
-          git add *
-          git commit -m "Build site" 
-          git push origin test-branch -f
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with: 
+          commit_message: "Site build"
+          branch: test-branch
