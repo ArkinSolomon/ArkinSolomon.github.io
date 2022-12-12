@@ -26,8 +26,8 @@ jobs:
           rm -rf *
           cp -a ../tmp/. .
 
-          rm -rf .github
           touch .nojekyll
+          ls -al
 
           git config user.name 'github-actions[bot]'
           git config user.email 'github-actions[bot]@users.noreply.github.com'
