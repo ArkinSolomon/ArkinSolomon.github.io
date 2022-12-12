@@ -32,3 +32,5 @@ jobs:
         with: 
           commit_message: "Site build"
           branch: test-branch
+          add_options: '-f'
+          push_options: '-f'
