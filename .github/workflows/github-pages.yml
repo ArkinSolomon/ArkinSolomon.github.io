@@ -37,3 +37,4 @@ jobs:
           git merge -s ours gh-pages
           git checkout gh-pages
           git merge master
+          git push -f -u origin master
