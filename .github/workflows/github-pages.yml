@@ -33,9 +33,7 @@ jobs:
 
           touch .nojekyll
           ls -al
-      - uses: stefanzweifel/git-auto-commit-action@v4
-        with: 
-          commit_message: "Site build"
-          branch: gh-pages
-          add_options: '-A -f -v'
-          push_options: '-f'
+           
+          git merge -s ours gh-pages
+          git checkout gh-pages
+          git merge master
