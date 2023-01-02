@@ -34,5 +34,5 @@ jobs:
         with: 
           commit_message: "Site build"
           branch: gh-pages
-          add_options: '-A -f'
+          add_options: '-A -f -v'
           push_options: '-f'
