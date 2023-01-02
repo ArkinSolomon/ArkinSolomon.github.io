@@ -13,6 +13,7 @@ jobs:
       - name: Build site
         run: |
           git fetch --all
+          git checkout origin/master
           
           sudo apt-get update
           sudo apt-get install ruby
