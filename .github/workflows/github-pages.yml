@@ -15,9 +15,9 @@ jobs:
           git fetch --all
           git checkout gh-pages
           git checkout master
-          git merge -s ours gh-pages
+          git merge --allow-unrelated-histories -s ours gh-pages
           git checkout gh-pages
-          git merge master
+          git merge --allow-unrelated-histories master
           
           sudo apt-get update
           sudo apt-get install ruby
