@@ -23,7 +23,7 @@ $themes: (default: (theme-filter:invert(64%) sepia(0%) saturate(1874%) hue-rotat
 
   @each $theme,
   $map in $themes {
-    .theme--#{$theme} & {
+    .theme--#{$theme} &, &.theme--#{$theme} {
       $theme-map: () !global;
 
       @each $key,
