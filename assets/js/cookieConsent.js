@@ -27,14 +27,17 @@ function googleAnalytics() {
   window.dataLayer = window.dataLayer || [];
   function gtag() { dataLayer.push(arguments); }
   gtag('js', new Date());
-  gtag('config', 'G-MZMD99CZ5B');
+  gtag('config', 'G-MZMD99CZ5B', {
+    cookie_domain: 'arkinsolomon.net',
+    cookie_prefix: 'as'
+  });
 }
 
 //Deny cookies (after accepting, only called from cookie policy page)
 function denyCookie() {
-  setCookie('_ga', '', 0);
-  setCookie('_gid', '', 0);
-  setCookie('_ga_MZMD99CZ5B', '', 0);
+  setCookie('as_ga', '', 0);
+  setCookie('as_gid', '', 0);
+  setCookie('as_ga_MZMD99CZ5B', '', 0);
   setCookie('c_pref', '', 0);
   setCookie('theme', '', 0);
   location.reload();
