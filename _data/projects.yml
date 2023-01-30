@@ -75,7 +75,16 @@
   image-path: /images/projects/wordle-solver/wordle-solver-main.png
   link: /projects/wordle-solver
   short-desc: Automatically solve wordles
-  featured: true
+  featured: false
   tags:
     - React
     - JavaScript
+- name: Sakura
+  id: sakura
+  image-path: /images/projects/sakura/sakura-logo.png
+  link: /projects/sakura
+  short-desc: A programming langauge for installers
+  featured: true
+  tags: 
+    - Java
+
