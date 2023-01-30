@@ -42,13 +42,7 @@ $map in $themes {
 
   @each $theme,
   $map in $themes {
-<<<<<<< Updated upstream
     .theme--#{$theme} & {
-=======
-
-    .theme--#{$theme} &,
-    &.theme--#{$theme} {
->>>>>>> Stashed changes
       $theme-map: () !global;
 
       @each $key,
