@@ -1,7 +1,7 @@
 ---
 layout: main
 ---
-{% assign project = site.data.projects | where:"id", page.id | first %}
+{% assign project = site.data.projects | where: "id", page.id | first %}
 {% assign img-width = 100 %}
 {% if page.force-width %}
   {% assign img-width = page.force-width %}
@@ -15,7 +15,21 @@ layout: main
     <hr>
     {% assign img-alt = project.name %}
     {% assign img-path = project.image-path %}
-    {% include project-image.html %}
+    {% if page.override %}
+      {% assign img-path = page.override %}
+    {% endif %}
+
+    {% if page.override-dark %}
+      <div class="default-only">
+        {% include project-image.html %}
+      </div>
+      {% assign img-path = page.override-dark %}
+      <div class="dark-only">
+        {% include project-image.html %}
+      </div>
+    {% else %}
+      {% include project-image.html %}
+    {% endif %}
     <div id="project-content">
       {{ content }}
     </div>

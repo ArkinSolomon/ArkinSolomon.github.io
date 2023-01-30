@@ -19,11 +19,30 @@ $themes: (default: (theme-filter:invert(64%) sepia(0%) saturate(1874%) hue-rotat
     even-row: #242424),
 );
 
+@each $theme,
+$map in $themes {
+
+  @each $t,
+  $_ in $themes {
+    @if $t !=$theme {
+      .theme--#{$theme} .#{$t}-only {
+        display: none;
+      }
+    }
+
+    @else {
+      .theme--#{$theme} .#{$t}-only {
+        display: inherit;
+      }
+    }
+  }
+}
+
 @mixin themed() {
 
   @each $theme,
   $map in $themes {
-    .theme--#{$theme} &, &.theme--#{$theme} {
+    .theme--#{$theme} & {
       $theme-map: () !global;
 
       @each $key,
