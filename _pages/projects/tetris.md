@@ -5,6 +5,9 @@ permalink: /projects/tetris
 id: tetris
 force-width: 65
 ---
+
+***TEST GH-PAGES ENV***
+
 After finishing my first Introduction to Computer Programming final project, [Cuby](/projects/cuby), I made another one: the classic game of Tetris. I chose this project because I felt that it would be quite simple, and could be finished within a few weeks, since I didn't have much time left in class to complete it. It is once again built on Python (Python 3 this time) using [Pygame](https://www.pygame.org/). It follows the basic idea of Tetris. Blocks of different shapes fall from the sky, and you have to rotate and position them in order to fill a row. Once a row is filled, the row disappears, and the blocks fall down. One point is awarded when a block lands, and an additional ten points are awarded for each row that is filled. The goal of the game is to get the highest score you can without having the blocks touch the top of the screen. When a block touches the top of the screen, the game ends.
 
 The game can be scaled to any size using command line arguments (`--width` for width, `--height` for height). By default it is 9x20. It also includes a `--print-data` argument for debugging purposes. The game is stored in a two-dimensional array of boolean values (`map`). A value of true means that a tile is filled in at `map[y][x]` where `y` and `x` are 0-based indexes of the row and column. When all the values of `map[i]` are true, `map[i]` is deleted, and `map[i]` is set to `map[i - 1]`, and `map[i - 1]` is set to `map[i - 2]` and so on, until `map[0]`, which is set to a new array of all false values. Below you can see the game running on the right, and the terminal window with the `--print-data` argument updating.
