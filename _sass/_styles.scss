@@ -102,6 +102,8 @@ footer {
 
   #footer-text {
     @include lc-color-text;
+    @include background-color;
+    margin-bottom: 0;
 
     a {
       @include lc-color-text;
