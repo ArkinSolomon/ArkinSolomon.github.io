@@ -78,4 +78,12 @@
   featured: true
   tags: 
     - Java
-
+- name: X-Pkg
+  id: xpkg
+  link: /projects/xpkg
+  image-path: /images/projects/xpkg-logo.jpg
+  short-desc: A (non-existent) package manager for X-Plane
+  tags: 
+   - Java
+   - JavaScript
+   - React
