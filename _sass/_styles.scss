@@ -12,7 +12,7 @@ $hover-transition-time: .3s;
 $theme-transition-time: .24s;
 $card-button-width: 70%;
 
-body {
+html, body {
   @include background-color;
 
   height: 100%;
@@ -104,6 +104,7 @@ footer {
     @include lc-color-text;
     @include background-color;
     margin-bottom: 0;
+    padding-bottom: 2em;
 
     a {
       @include lc-color-text;

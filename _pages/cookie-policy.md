@@ -11,7 +11,7 @@ short-desc: What you need to know about this site's cookies
 Cookies are little pieces of text that websites ask your browser to keep. They are set for a variety of reasons and are kept across pages you visit. They may store data such as authorized information, website preferences, and tracking information to know who you are.
 
 <h4 class="cookie-heading">What cookies does this website set?</h4>
-Arkinsolomon.net sets first-party cookies provided by Google Analytics in order to track website data and analytics. This site may also set a cookie in order to remember your website preferences. There are no cookies that this site sets which are necessary. These are the cookies that this site sets, all of which are first party cookies: 
+Arkinsolomon.net sets first-party cookies provided by Google Analytics in order to track website data and analytics. This site may also set a cookie in order to remember your website preferences. Only `c_pref` and `theme` are necessary cookies, they will be set even if you deny cookies. These are the cookies that this site sets, all of which are first party cookies: 
 
 | Cookie Name      | Cookie Expiration | Cookie Reason                                    |
 |------------------|-------------------|--------------------------------------------------|

@@ -4,7 +4,7 @@ let hasAcceptedCookies = false;
 //Check if we already have the cookies set, show the banner and register event handlers if the cookie is not set
 if (getCookie('c_pref') === 'true') {
   googleAnalytics();
-} else {
+} else if (!getCookie('c_pref')) {
   //Show the banner
   cookieConsentBanner.show();
 
@@ -18,6 +18,7 @@ if (getCookie('c_pref') === 'true') {
 
   //Set that the cookies were not accepted
   $('#cookie-deny-button').click(() => {
+    setCookie('c_pref', 'false', 730);
     cookieConsentBanner.hide();
   });
 }
@@ -38,7 +39,6 @@ function denyCookie() {
   setCookie('as_ga', '', 0);
   setCookie('as_gid', '', 0);
   setCookie('as_ga_MZMD99CZ5B', '', 0);
-  setCookie('c_pref', '', 0);
-  setCookie('theme', '', 0);
+  setCookie('c_pref', 'false', 0);
   location.reload();
 }
