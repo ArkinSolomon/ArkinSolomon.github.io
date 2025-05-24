@@ -8,14 +8,14 @@ force-width: 48
 This project was for my AP Computer Science Principles class in 10th grade. I was able to finish most of the course work early, and was able to start on my final project. I used Node.Js and Socket.io to create a simple multiplayer game called Zombie Fight. In it, you are a circle that runs around from green circles, zombies. The game is far from complete, riddled with bugs, and it also has no ending. You just run around avoiding zombies and healing until your computer crashes or the server crashes from spawning too many zombies.
 
 {% assign img-alt = "Zombie Fight game screenshot" %}
-{% assign img-path = "/images/projects/zombie-fight/game-screenshot.png" %}
+{% assign img-path = "/media/projects/zombie-fight/game-screenshot.png" %}
 {% assign img-width = 40 %}
 {% include project-image.html %}
 
 This project was really fun to work on, it took me a few months to make, and has a lot of features/implementations that I think are neat. One feature I really liked was the console. The terminal window turns into a console to run administrator commands to change gameplay. You could change zombie speeds, kill players or zombies, view system information, and more. The console was very useful for debugging and testing.
 
 {% assign img-alt = "Zombie Fight console screenshot" %}
-{% assign img-path = "/images/projects/zombie-fight/console-screenshot.png" %}
+{% assign img-path = "/media/projects/zombie-fight/console-screenshot.png" %}
 {% assign img-width = 35 %}
 {% include project-image.html %}
 

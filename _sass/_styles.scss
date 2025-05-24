@@ -12,18 +12,21 @@ $hover-transition-time: .3s;
 $theme-transition-time: .24s;
 $card-button-width: 70%;
 
-html, body {
+html,
+body {
   @include background-color;
 
+  min-height: 100vh;
   height: 100%;
+
   margin: 0;
   padding: 0;
 
   &.is-reveal-open {
     overflow: unset !important;
-  
+
     #page-wrapper {
-      overflow-y: scroll;
+      overflow-y: auto;
     }
   }
 }
@@ -88,6 +91,10 @@ header {
       }
     }
   }
+}
+
+hr {
+  max-width: unset;
 }
 
 footer {
@@ -270,10 +277,6 @@ thead>tr {
   }
 }
 
-#about-text-wrapper {
-  padding: 10px;
-}
-
 #about-title-wrapper {
   padding-top: 20px;
 }
@@ -285,14 +288,23 @@ thead>tr {
 
 #about-arkin-image {
   border-radius: 25px;
-  max-height: 400px;
+  max-height: 600px;
+}
+
+#about-right {
+  height: 100%;
 }
 
 #about-links {
   font-size: 12pt;
-  text-align: center;
-  margin-top: 15px;
+  line-height: 12pt;
   color: $text-gray;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
   @include underline-hover-anchor;
 }
 
@@ -333,23 +345,25 @@ thead>tr {
     }
 
     button {
-      cursor: pointer;
       height: 50px;
-      text-align: center;
       display: block;
+      cursor: pointer;
+      text-align: center;
+
       border-radius: 5px;
       padding: 4px;
       padding-left: 8px;
-      font-size: 13pt;
-      display: block;
 
-      @include center-horiz;
+      font-size: 13pt;
+
       @include hc-border-1px;
     }
 
     .button-left {
       @include background-color;
       @include hc-color-text;
+
+      margin-left: auto;
 
       &:hover {
         @include themed() {
@@ -367,10 +381,20 @@ thead>tr {
         color: t('background')
       }
 
+      @media only screen and (max-width: 640px) {
+        margin-right: auto;
+      }
+
       &:hover {
         @include lc-color-text;
       }
     }
+  }
+
+  #cookie-button-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 4em;
   }
 }
 
@@ -508,6 +532,9 @@ thead>tr {
 
 .reveal {
   @include background-color;
+
+  width: 80vw;
+  height: auto;
 
   @include themed () {
     border: 1px solid t('lc-color');

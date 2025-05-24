@@ -1,7 +1,8 @@
 {% unless img-width %}
   {% assign img-width = 100 %}
 {% endunless %}
-{% assign modal-id = img-alt | split: ' ' | join: '-' | append: '-modal' %}
+
+{% assign modal-id = img-alt | split: ' ' | join: '-' | append: '-modal' |  replace: ',' '-',  %}
 {% assign img-modal-alt = img-alt | append: ' modal' %}
 <style>img[alt="{{ img-alt }}"]{width: {{ img-width }}%;height: auto;}</style>
 <div class="center-horiz-flex">

@@ -34,17 +34,17 @@ $(function () {
 
 //Toggle dark mode on or off
 function toggleDarkMode() {
-  const body = $('body');
+  const rootElem$ = $('html');
 
   //Change the root class
-  body.toggleClass('theme--default');
-  body.toggleClass('theme--dark');
-  isDark = body.hasClass('theme--dark');
+  rootElem$.toggleClass('theme--default');
+  rootElem$.toggleClass('theme--dark');
+  isDark = rootElem$.hasClass('theme--dark');
 }
 
 //Update the image
 function updateThemeImage() {
-  $('#theme-image').attr('src', `/images/${isDark ? 'sun' : 'moon'}.png`);
+  $('#theme-image').attr('src', `/media/${isDark ? 'sun' : 'moon'}.png`);
 }
 
 //These functions taken from w3schools (https://www.w3schools.com/js/js_cookies.asp)
