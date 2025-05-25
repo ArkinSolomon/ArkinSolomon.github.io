@@ -5,7 +5,7 @@ permalink: /cookie-policy
 id: cookie-policy
 short-desc: What you need to know about this site's cookies
 ---
-<b class="cookie-heading">Last update</b>: 27 January 2023
+<b class="cookie-heading">Last update</b>: 4 February 2024
 
 <h4 class="cookie-heading">What are cookies?</h4>
 Cookies are little pieces of text that websites ask your browser to keep. They are set for a variety of reasons and are kept across pages you visit. They may store data such as authorized information, website preferences, and tracking information to know who you are.
