@@ -1,6 +1,6 @@
 - name: Pascal's Triangle
   id: pascals-triangle
-  image-path: /images/projects/pascals-triangle.png
+  image-path: /media/projects/pascals-triangle.png
   link: /projects/pascals-triangle
   short-desc: An infinitely scrolling Pascal's Triangle
   featured: false
@@ -9,7 +9,7 @@
     - JavaScript
 - name: SpanishDict Client
   id: spanish-dict-client
-  image-path: /images/projects/generic/npm-logo.png
+  image-path: /media/projects/generic/npm-logo.png
   link: /projects/spanish-dict-client
   short-desc: A SpanishDict web-scraper
   featured: false
@@ -18,7 +18,7 @@
     - JavaScript
 - name: Discord Emoji Converter
   id: discord-emoji-converter
-  image-path: /images/projects/generic/npm-logo.png
+  image-path: /media/projects/generic/npm-logo.png
   link: /projects/discord-emoji-converter
   short-desc: Convert Discord shortcodes to emojis
   featured: false
@@ -27,7 +27,7 @@
     - JavaScript
 - name: Zombie Fight
   id: zombie-fight
-  image-path: /images/projects/zombie-fight/logo.png
+  image-path: /media/projects/zombie-fight/logo.png
   link: /projects/zombie-fight
   short-desc: Can you fight off the zombies?
   featured: false
@@ -36,16 +36,15 @@
     - JavaScript
 - name: Cuby
   id: cuby
-  image-path: /images/projects/cuby/cuby-title-screen.png
+  image-path: /media/projects/cuby/cuby-title-screen.png
   link: /projects/cuby
   short-desc: A really bad platformer
-  featured: true
   tags:
     - Game
     - Python
 - name: Tetris
   id: tetris
-  image-path: /images/projects/tetris/tetris.png
+  image-path: /media/projects/tetris/tetris.png
   link: /projects/tetris
   short-desc: The classic game of Tetris
   featured: false
@@ -54,7 +53,7 @@
     - Python
 - name: Infinite Mazes
   id: infinite-mazes
-  image-path: /images/projects/infinite-mazes/infinite-mazes-logo.png
+  image-path: /media/projects/infinite-mazes/infinite-mazes-logo.png
   link: /projects/infinite-mazes
   short-desc: Solve as many mazes as you want
   featured: true
@@ -63,7 +62,7 @@
     - Unity
 - name: Wordle Solver
   id: wordle-solver
-  image-path: /images/projects/wordle-solver/wordle-solver-main.png
+  image-path: /media/projects/wordle-solver/wordle-solver-main.png
   link: /projects/wordle-solver
   short-desc: Automatically solve wordles
   featured: false
@@ -72,7 +71,7 @@
     - JavaScript
 - name: Sakura
   id: sakura
-  image-path: /images/projects/sakura/sakura-logo.png
+  image-path: /media/projects/sakura/sakura-logo.png
   link: /projects/sakura
   short-desc: A programming langauge for installers
   featured: true
@@ -81,9 +80,18 @@
 - name: X-Pkg
   id: xpkg
   link: /projects/xpkg
-  image-path: /images/projects/xpkg-logo.jpg
+  image-path: /media/projects/xpkg-logo.jpg
   short-desc: A (non-existent) package manager for X-Plane
   tags: 
    - Java
    - JavaScript
    - React
+- name: NASA Student Launch
+  id: nasa-student-launch
+  link: /projects/nasa-student-launch
+  image-path: /media/projects/nasa-student-launch/student-launch-team.jpg
+  short-desc: Cedarville University's NASA student launch initiative team
+  featured: true
+  tags: 
+   - Embedded
+   - C++

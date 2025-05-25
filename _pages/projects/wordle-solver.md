@@ -37,7 +37,7 @@ await app.insertWord(guess);
 Some ways to improve it would be adding scores to letters, so that words with more vowels would be prioritized, as would words with common letters. It currently has a success rate of about 85-90%. The reasoning for this is the sheer size of the word list. There are almost 16,000 words in the list of five letter words, whereas the [official word list](https://github.com/tabatkins/wordle-list) contains about 13,000. There can be a lot of ambiguity between words. For instance take this example take this failed solution:
 
 {% assign img-alt = "Failed wordle solution" %}
-{% assign img-path = "/images/projects/wordle-solver/ambiguity.png" %}
+{% assign img-path = "/media/projects/wordle-solver/ambiguity.png" %}
 {% assign img-width = 40 %}
 {% include project-image.html %}
 

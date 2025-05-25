@@ -10,7 +10,7 @@ After finishing my first Introduction to Computer Programming final project, [Cu
 The game can be scaled to any size using command line arguments (`--width` for width, `--height` for height). By default it is 9x20. It also includes a `--print-data` argument for debugging purposes. The game is stored in a two-dimensional array of boolean values (`map`). A value of true means that a tile is filled in at `map[y][x]` where `y` and `x` are 0-based indexes of the row and column. When all the values of `map[i]` are true, `map[i]` is deleted, and `map[i]` is set to `map[i - 1]`, and `map[i - 1]` is set to `map[i - 2]` and so on, until `map[0]`, which is set to a new array of all false values. Below you can see the game running on the right, and the terminal window with the `--print-data` argument updating.
 
 {% assign img-alt = "Data outputed" %}
-{% assign img-path = "/images/projects/tetris/tetris-print-data.png" %}
+{% assign img-path = "/media/projects/tetris/tetris-print-data.png" %}
 {% assign img-width = 65 %}
 {% include project-image.html %}
 Each block is a group of tiles, and each tile is just a square sprite with a color. As the block updates, it moves all of it's own tiles down by increasing the y-coordinate of the tile, after checking to see if there is room for it to move. Each block is hard-coded into the game, and the game generates a random number between zero and six (inclusive) to pick a block to generate. When a block is generated, not only does it generate tiles relative to the center of the game, it also sets an axis of rotation, that each block is revolved around. Below is part of the code for block rotation:

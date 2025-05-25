@@ -4,8 +4,8 @@ title: Sakura
 permalink: /projects/sakura
 id: sakura
 force-width: 40
-override: /images/projects/sakura/sakura-logo-text.png
-override-dark: /images/projects/sakura/sakura-logo-text-white.png
+override: /media/projects/sakura/sakura-logo-text.png
+override-dark: /media/projects/sakura/sakura-logo-text-white.png
 ---
 
 One of the biggest issues with running user created installer scripts is trust: you can't always trust the user that wrote the script. Another issue with installer scripts is that failed install scripts can cause files to be left half-installed or in a broken state. This is what Sakura seeks to solve. Sakura is a dynamically typed, high-level, Turing-complete, and customizable programming language built to interact with the file system. It's designed specifically for package managers, in order to allow package managers to run installer scripts without fear of trusting scripts, or leaving files in a broken state.
