@@ -38,7 +38,5 @@ The apogee the team actually reached was 3,719 feet, which is about 400 feet und
 I enjoyed working on this project a lot, and it is definetly one of the top highlights from my time at Cedarville. While my primary responsibility on this team was software development, I also had other responsibilities, including writing detailed technical reports to both NASA and Cedarville, giving presentations to Cedarville University, and teaching elementary through high school students about rocketry at local schools. This project taught me a lot about technical development, embedded development, and problem solving, but also the importance of communication, technical writing, and risk assesment. The code is publicly archived on GitHub [here](https://github.com/ArkinSolomon/project-elijah). More media and information can be found on the team's [website](https://cedarville-universitys-student-launch.webflow.io/), [Instagram](https://www.instagram.com/custudentlaunch/?hl=en), and [YouTube](https://www.youtube.com/@custudentlaunch). Our team's final video was created by Daniel Hogsed:
 
 <div class="center-horiz-flex">
-  <video width="700" controls>
-    <source src="/media/projects/nasa-student-launch/project-video.mp4">
-  </video>
+<iframe src="https://drive.google.com/file/d/1dxEvPYckw6Ih4ifImic3Yft2qkGSI4jG/preview" width="700" height="394" allow="autoplay" allowfullscreen></iframe>
 </div>
